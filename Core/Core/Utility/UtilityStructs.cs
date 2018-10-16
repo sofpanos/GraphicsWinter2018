@@ -5,11 +5,13 @@ namespace Core.Utility
     {
         private int x;
         private int y;
+        private bool iniatilized;
 
         public Position(int x, int y)
         {
             this.x = x;
             this.y = y;
+            this.iniatilized = true;
         }
 
         public int getX()
@@ -20,6 +22,26 @@ namespace Core.Utility
         public int getY()
         {
             return y;
+        }
+
+        public bool isInitialized()
+        {
+            return iniatilized;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if(!(obj is Position))
+            {
+                return false;
+            }
+            Position otherPosition = (Position)obj;
+            return Equals(otherPosition);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.x + this.y;
         }
 
         public bool Equals(Position other)

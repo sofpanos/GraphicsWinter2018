@@ -11,5 +11,6 @@ namespace Core
         private Dictionary<string, Hallway> hallways;
         private Dictionary<string, Position> entrances;
         private Dictionary<string, Position> exits;
+        private BlockType[,] map;
     }
 }

@@ -14,8 +14,8 @@ namespace Core.Constructions
         private string type;
         private List<Position> floorPositions;
         private List<Position> wallPositions;
-        private Position entrance;
-        private Position exit;
+        private Position? entrance;
+        private Position? exit;
         private bool hasLight = false;
 
         public Room(int xOff, int yOff, int width, int height)
@@ -58,7 +58,7 @@ namespace Core.Constructions
             this.entrance = entrance;
         }
 
-        public Position getEntrance()
+        public Position? getEntrance()
         {
             return this.entrance;
         }
@@ -68,7 +68,7 @@ namespace Core.Constructions
             this.exit = exit;
         }
 
-        public Position getExit()
+        public Position? getExit()
         {
             return this.exit;
         }
