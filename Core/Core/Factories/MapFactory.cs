@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+using Core.Utility;
 namespace Core.Factories
 {
-    class MapFactory
+    public class MapFactory
     {
+        public static GameMap getNewGameMap(int width, int height)
+        {
+            BlockType[,] newMap = new BlockType[width, height];
+            return new GameMap();
+        }
+
+        public static GameMap getNewGameMap(int width, int height, int seed)
+        {
+
+            return new GameMap();
+        }
     }
 }
