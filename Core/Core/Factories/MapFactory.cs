@@ -35,12 +35,9 @@ namespace Core.Factories
         {
             GameMap theMap = new GameMap(width, height);
             initializeMapArray(theMap, width, height);
+            
             Random random = new Random(seed);
             List<Section> sections = createSections(width, height, random);
-
-            int id = START_ID_NUM;
-            Position? exit = null;
-            Position? exitSwitch = null;
 
             createRoomsAndHallways(sections, theMap, random);
 
