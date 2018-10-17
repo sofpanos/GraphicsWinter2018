@@ -99,6 +99,7 @@ namespace Core.Utility
     {
         public const string Wall = "Wall";
         public const string Floor = "Floor";
+        public const string Nothing = "Nothing";
 
         private string type;
 

@@ -77,13 +77,6 @@ namespace Core.Utility
             return corners;
         }
 
-        public bool contains(int x, int y)
-        {
-            bool result = this.x <= x && x <= this.x + width - 1;
-            result &= this.y <= y && y <= this.y + height - 1;
-            return result;
-        }
-
         public bool contains(Position pos)
         {
             bool result = this.x <= pos.getX() && pos.getX() <= this.x + width - 1;

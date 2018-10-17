@@ -8,34 +8,35 @@ namespace Core.Constructions
     {
         public const int MIN_SIZE = 3;
 
-        private List<Position> path;
-        private List<Position> wall;
+        private List<Position> floorPositions;
+        private List<Position> wallPositions;
+        private Position? intersection;
         private string id = "";
 
         public Hallway(string id, List<Position> path, List<Position> wall)
         {
-            this.path = path;
-            this.wall = wall;
+            this.floorPositions = path;
+            this.wallPositions = wall;
         }
 
         public List<Position> getPath()
         {
-            return path;
+            return floorPositions;
         }
 
         public List<Position> getWallPosition()
         {
-            return wall;
+            return wallPositions;
         }
 
-        public void setPath(List<Position> path)
+        public void setFloorPositions(List<Position> path)
         {
-            this.path = path;
+            this.floorPositions = path;
         }
 
         public void setWallPosition(List<Position> wallPositions)
         {
-            this.wall = wallPositions;
+            this.wallPositions = wallPositions;
         }
 
         public string getID()
@@ -45,12 +46,30 @@ namespace Core.Constructions
 
         public bool isWall(Position pos)
         {
-            return wall.Contains(pos);
+            return wallPositions.Contains(pos);
         }
 
-        public bool isPath(Position pos)
+        public bool isFloor(Position pos)
         {
-            return path.Contains(pos);
+            return floorPositions.Contains(pos);
+        }
+
+        public Position? getIntersection()
+        {
+            return intersection;
+        }
+
+        public void setIntersection(Position intersection)
+        {
+            if (this.intersection != null)
+            {
+                this.floorPositions.Remove((Position)this.intersection);
+                this.wallPositions.Add((Position)this.intersection);
+            } 
+            this.intersection = intersection;
+            this.floorPositions.Add((Position)this.intersection);
+            this.wallPositions.Add((Position)this.intersection);
+
         }
     }
 }
