@@ -11,7 +11,8 @@
     <AssemblyName>Core</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,10 +46,12 @@
     <Compile Include="Constructions\Hallway.cs" />
     <Compile Include="Constructions\Room.cs" />
     <Compile Include="Factories\HallwayFactory.cs" />
+    <Compile Include="Factories\MapFactory.cs" />
     <Compile Include="Factories\RoomFactory.cs" />
     <Compile Include="GameMap.cs" />
     <Compile Include="Utility\AStar\AStar.cs" />
     <Compile Include="Utility\AStar\Node.cs" />
+    <Compile Include="Utility\BlockType.cs" />
     <Compile Include="Utility\NodeEqualityComparer.cs" />
     <Compile Include="Utility\Rectangle.cs" />
     <Compile Include="Utility\UtilityStructs.cs" />
