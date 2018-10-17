@@ -1,47 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
 using Core.Utility;
+using Core.Constructions;
+
 namespace Core.Factories
 {
     public class MapFactory
     {
         private const int MAX_SLICE_SIZE = 20;
         private const int MIN_SLICE_SIZE = 12;
+        private const string ROOM_ID_FORMAT_STRING = "R{0,3:D3}";
+        private const string HALLWAY_ID_FORMAT_STRING = "H{0,3:D3}";
         private const int START_ID_NUM = 1;
+        
+        
         public static GameMap getNewGameMap(int width, int height)
         {
-            BlockType[,] newMap = new BlockType[width, height];
-            initializeMapArray(newMap);
+            GameMap theMap = new GameMap(width, height);
+            initializeMapArray(theMap, width, height);
             Random random = new Random();
             List<Section> sections = createSections(width, height, random);
-
+            
+            int id = START_ID_NUM;
             Position? exit = null;
             Position? exitSwitch = null;
             Section? previousSection = null;
+            
             foreach (Section current in sections)
             {
-
+                theMap.addRoom(String.Format("R{0,3:D3}", id), RoomFactory.getRoom(current, random));
             }
 
-            return new GameMap();
+            return new GameMap(width, height);
         }
 
         public static GameMap getNewGameMap(int width, int height, int seed)
         {
-            BlockType[,] newMap = new BlockType[width, height];
-            initializeMapArray(newMap);
+            GameMap theMap = new GameMap(width, height);
+            initializeMapArray(theMap, width, height);
             Random random = new Random(seed);
             List<Section> sections = createSections(width, height, random);
 
-            return new GameMap();
+            int id = START_ID_NUM;
+            Position? exit = null;
+            Position? exitSwitch = null;
+            Section? previousSection = null;
+
+            foreach (Section current in sections)
+            {
+                theMap.addRoom(String.Format("R{0,3:D3}", id), RoomFactory.getRoom(current, random));
+            }
+
+            return new GameMap(width, height);
         }
 
-        private static void initializeMapArray(BlockType[,] mapArray)
+        private static void initializeMapArray(GameMap mapArray, int width, int height)
         {
             //Να ελέγξουμε αν γίνεται με foreach γιατί στη java με passed by value types δε δουλεύει.
-            for (int x = 0; x <= mapArray.GetUpperBound(0); x++)
+            for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y <= mapArray.GetUpperBound(1); y++)
+                for (int y = 0; y <= height; y++)
                 {
                     mapArray[x, y] = BlockType.Nothing;
                 }
@@ -119,5 +137,7 @@ namespace Core.Factories
 
             return theSections;
         }
+
+        
     }
 }
