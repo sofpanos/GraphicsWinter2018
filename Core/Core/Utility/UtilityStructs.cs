@@ -83,6 +83,16 @@ namespace Core.Utility
         {
             return height;
         }
+
+        public void setWidth(int newWidth)
+        {
+            this.width = newWidth;
+        }
+
+        public void setHeight(int newHeigth)
+        {
+            this.height = newHeigth;
+        }
     }
 
     public struct WalkableTile
