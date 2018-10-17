@@ -14,27 +14,24 @@ namespace Core.Factories
         private const int START_ID_NUM = 1;
         
         
-        public static GameMap getNewGameMap(int width, int height)
+        public static GameMap getNewGameMap(int width, int height, int level)
         {
             GameMap theMap = new GameMap(width, height);
             initializeMapArray(theMap, width, height);
+            
             Random random = new Random();
             List<Section> sections = createSections(width, height, random);
             
-            int id = START_ID_NUM;
-            Position? exit = null;
-            Position? exitSwitch = null;
-            Section? previousSection = null;
-            
-            foreach (Section current in sections)
-            {
-                theMap.addRoom(String.Format("R{0,3:D3}", id), RoomFactory.getRoom(current, random));
-            }
+            createRoomsAndHallways(sections, theMap, random);
+
+            createLightsAndSwitches(theMap, random, level, 0.8);
+
+            createExitSwitch(theMap, random);
 
             return new GameMap(width, height);
         }
 
-        public static GameMap getNewGameMap(int width, int height, int seed)
+        public static GameMap getNewGameMap(int width, int height,int level, int seed)
         {
             GameMap theMap = new GameMap(width, height);
             initializeMapArray(theMap, width, height);
@@ -44,26 +41,30 @@ namespace Core.Factories
             int id = START_ID_NUM;
             Position? exit = null;
             Position? exitSwitch = null;
-            Section? previousSection = null;
 
-            foreach (Section current in sections)
-            {
-                theMap.addRoom(String.Format("R{0,3:D3}", id), RoomFactory.getRoom(current, random));
-            }
+            createRoomsAndHallways(sections, theMap, random);
+
+            createLightsAndSwitches(theMap, random, level, 0.8);
+
+            createExitSwitch(theMap, random);
 
             return new GameMap(width, height);
+        }
+
+        private static void createExitSwitch(GameMap theMap, Random random)
+        {
+            Room room = theMap.getRooms()[random.Next(theMap.getRooms().Count)];
+            Position exit = room.getWallPositions()[room.getWallPositions().Count];
+            room = theMap.getRooms()[random.Next(theMap.getRooms().Count)];
+            Position exitSwitch = room.getWallPositions()[room.getWallPositions().Count];
+            theMap[exit.getX(), exit.getY()] = BlockType.Exit;
+            theMap[exitSwitch.getX(), exitSwitch.getY()] = BlockType.ExitSwitch;
         }
 
         private static void initializeMapArray(GameMap mapArray, int width, int height)
         {
             //Να ελέγξουμε αν γίνεται με foreach γιατί στη java με passed by value types δε δουλεύει.
-            for (int x = 0; x < width; x++)
-            {
-                for (int y = 0; y <= height; y++)
-                {
-                    mapArray[x, y] = BlockType.Nothing;
-                }
-            }
+            
         }
 
         private static List<Section> createSections(int width, int height, Random random)
@@ -138,6 +139,43 @@ namespace Core.Factories
             return theSections;
         }
 
-        
+        private static void createRoomsAndHallways(List<Section> sections, GameMap map, Random random)
+        {
+            int id = START_ID_NUM;
+            Room previousRoom = null;
+            Hallway previousHall = null;
+
+            foreach (Section current in sections)
+            {
+                map.addRoom(String.Format(ROOM_ID_FORMAT_STRING, id++), RoomFactory.getRoom(current, random));
+            }
+
+            id = START_ID_NUM;
+            Hallway currentHall = null;
+            foreach (Room currentRoom in map.getRooms())
+            {
+                if (previousRoom == null)
+                {
+                    previousRoom = currentRoom;
+                    continue;
+                }
+                previousHall = currentHall = HallwayFactory.getHallway(String.Format(HALLWAY_ID_FORMAT_STRING, id++), previousRoom, previousHall, currentRoom, map);
+            }
+        }
+
+        private static void createLightsAndSwitches(GameMap map, Random random, int level, double propability)
+        {
+            foreach (Room room in map.getRooms())
+            {
+                //80% Πιθανότητα / τα περασμένα επίπεδα ώστε να υπάρχει φως σε κάποιο δωμάτιο.
+                if (random.NextDouble() < propability / level)
+                {
+                    Position lightSwitch = room.getWallPositions()[random.Next(room.getWallPositions().Count)];
+                    map[lightSwitch.getX(), lightSwitch.getY()] = BlockType.Switch;
+                    Position light = room.getFloorPositions()[random.Next(room.getFloorPositions().Count)];
+                    map[light.getX(), light.getY()] = BlockType.Light;
+                }
+            }
+        }
     }
 }

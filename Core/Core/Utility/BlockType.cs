@@ -12,6 +12,7 @@ namespace Core.Utility
         Nothing, 
         Light, 
         Switch, 
-        ExitSwitch
+        ExitSwitch,
+        Exit
     }
 }
