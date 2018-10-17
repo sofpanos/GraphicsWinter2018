@@ -7,11 +7,6 @@ namespace Core.Utility
 {
     public enum BlockType
     {
-        Wall, 
-        Floor, 
-        Nothing, 
-        Light, 
-        Switch, 
-        ExitSwitch
+        Wall, Floor, 
     }
 }
