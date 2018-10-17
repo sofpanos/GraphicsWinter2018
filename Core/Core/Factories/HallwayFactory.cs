@@ -7,12 +7,16 @@ namespace Core.Factories
 {
     public class HallwayFactory
     {
-        public static Hallway getHallway(string hallwayID, Position entrance, Position exit, WalkableTile[,] grid)
+        public static Hallway getHallway(string id, Room previousRoom, Hallway previousHall, Room nextRoom, GameMap map)
         {
-            List<Position> path = new List<Position>();
-            List<Position> wall = new List<Position>();
-
-            return new Hallway(hallwayID, path, wall);
+            throw new NotImplementedException();
         }
+
+        private static Hallway getHallway(string hallwayID, Position entrance, Position exit, WalkableTile[,] grid)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }
