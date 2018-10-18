@@ -25,6 +25,7 @@ namespace Core.Factories
                 WalkableTile[,] walkableMap = initializeWalkable(map);
                 path = AStar.findPath(entrance, exit, walkableMap);
             }
+
             List<Position> wallPositions = createWallPositions(path, entrance, exit, map);
             
             return new Hallway(id, path, wallPositions);
@@ -45,8 +46,45 @@ namespace Core.Factories
 
         private static List<Position> createWallPositions(List<Position> path,Position entrance, Position exit, GameMap map)
         {
+            List<Position> wall = new List<Position>();
+            foreach (Position step in path)
+            {
+                if (step.Equals(entrance) || step.Equals(exit))
+                {
+                    continue;
+                }
+                foreach (Position neighbor in getNeighbors(step))
+                {
+                    if (path.Contains(neighbor))
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        wall.Add(neighbor);
+                        map[neighbor.getX(), neighbor.getY()] = BlockType.Wall;
+                    }
+                }
+                map[step.getX(), step.getY()] = BlockType.Floor;
+            }
+            return wall;
+        }
 
-            throw new NotImplementedException();
+        private static IEnumerable<Position> getNeighbors(Position pos)
+        {
+            List<Position> neighbors = new List<Position>();
+            for (int x = pos.getX() - 1; x <= pos.getX() + 1; x++)
+            {
+                for (int y = pos.getY() - 1; y <= pos.getY() + 1; y++)
+                {
+                    if (pos.Equals(new Position(x, y)))
+                    {
+                        continue;
+                    }
+                    neighbors.Add(new Position(x, y));
+                }
+            }
+            return neighbors;
         }
 
         private static WalkableTile[,] initializeWalkable(GameMap map)
