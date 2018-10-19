@@ -11,12 +11,13 @@ namespace Core.Factories
         {
         }
 
-        public static Room getRoom(Section mapSection, Random random)
+        public static Room getRoom(Section mapSection, string id, Random random)
         {
             int numberOfRects = random.Next(1, 8);
             Rectangle[] roomRectangles = createRoomRectangles(mapSection, numberOfRects, random);
             Room newRoom = getRoom(mapSection, roomRectangles);
             setRoomComponents(newRoom, roomRectangles);
+            newRoom.setID(id);
             return newRoom;
         }
 

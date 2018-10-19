@@ -55,7 +55,7 @@ namespace Core
             {
                 this.map[wall.getX(), wall.getY()] = BlockType.Floor;
             }
-            foreach (Position floor in hallway.getWallPosition())
+            foreach (Position floor in hallway.getWallPositions())
             {
                 this.map[floor.getX(), floor.getY()] = BlockType.Wall;
             }
@@ -92,6 +92,15 @@ namespace Core
                 roomsList.Add(roomPair.Value);
             }
             return roomsList;
+        }
+
+        public List<Hallway> getHallways()
+        {
+            List<Hallway> hallList = new List<Hallway>();
+            foreach(KeyValuePair<string, Hallway> pair in this.hallways){
+                hallList.Add(pair.Value);
+            }
+            return hallList;
         }
 
         public BlockType this[int x, int y]
