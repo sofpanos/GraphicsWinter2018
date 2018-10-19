@@ -121,7 +121,7 @@ namespace Core.Factories
             }
             else
             {
-                entrance = getPassage(previousHall.getWallPosition(), map, random);
+                entrance = getPassage(previousHall.getWallPositions(), map, random);
                 previousHall.setIntersection(entrance);
             }
             switchFloorWallTile(map, entrance);

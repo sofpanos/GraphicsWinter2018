@@ -1,0 +1,6 @@
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\bin\Release\Core.dll.config
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\bin\Release\Core.dll
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\bin\Release\Core.pdb
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\obj\Release\Core.csprojResolveAssemblyReference.cache
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\obj\Release\Core.dll
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\obj\Release\Core.pdb

@@ -144,7 +144,7 @@ namespace Core.Factories
 
             foreach (Section current in sections)
             {
-                map.addRoom(String.Format(ROOM_ID_FORMAT_STRING, id++), RoomFactory.getRoom(current, random));
+                map.addRoom(String.Format(ROOM_ID_FORMAT_STRING, id), RoomFactory.getRoom(current,String.Format(ROOM_ID_FORMAT_STRING, id++), random));
             }
 
             id = START_ID_NUM;

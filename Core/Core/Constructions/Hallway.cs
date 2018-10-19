@@ -24,7 +24,7 @@ namespace Core.Constructions
             return floorPositions;
         }
 
-        public List<Position> getWallPosition()
+        public List<Position> getWallPositions()
         {
             return wallPositions;
         }
