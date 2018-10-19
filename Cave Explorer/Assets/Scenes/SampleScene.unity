@@ -113,6 +113,77 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &2560173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 2050910054}
+--- !u!4 &54292186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 2138701536}
+--- !u!1001 &58905521
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (27)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &111331555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 597333290}
+--- !u!4 &148549831 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 812274754}
+--- !u!4 &164847063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1291656220}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,6 +250,1558 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &183304631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930633611}
+--- !u!1001 &184247694
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (33)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &210550130
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &211814170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 770074565}
+--- !u!4 &233816787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1751921804}
+--- !u!1001 &256590262
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &273725537
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.24881887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &282416441
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &289913960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 584046438}
+--- !u!4 &295638082 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 282416441}
+--- !u!1 &339380295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339380296}
+  m_Layer: 0
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &339380296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339380295}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.4907446, y: 1.472, z: 2.7511811}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2082332658}
+  - {fileID: 295638082}
+  - {fileID: 735997062}
+  - {fileID: 1490298097}
+  - {fileID: 667339306}
+  - {fileID: 487338624}
+  - {fileID: 1127848980}
+  - {fileID: 570882064}
+  - {fileID: 1722522468}
+  - {fileID: 1963290074}
+  - {fileID: 749317862}
+  - {fileID: 656174771}
+  - {fileID: 164847063}
+  - {fileID: 887993094}
+  - {fileID: 1777097304}
+  - {fileID: 1161657241}
+  - {fileID: 1805304635}
+  - {fileID: 148549831}
+  - {fileID: 1784206502}
+  - {fileID: 2024461425}
+  - {fileID: 908767538}
+  - {fileID: 183304631}
+  - {fileID: 1549391657}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &400209304
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &407075623
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &419303646
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (49)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &419303647 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 419303646}
+--- !u!4 &487338624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1122322239}
+--- !u!1001 &537276867
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &553765315
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &559836228
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &563069512
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (32)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &570882064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1115299092}
+--- !u!1001 &577913325
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &584046438
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &587766242
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &593084202
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (38)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &596329786
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &597333290
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (37)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &611902910
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &624702566
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &656174771 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 921306018}
+--- !u!4 &663044579 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1247604112}
+--- !u!4 &667339306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1579902260}
+--- !u!4 &687533179 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1789074293}
+--- !u!1001 &691261561
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &735997062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 975892444}
+--- !u!4 &741679786 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1538847036}
+--- !u!4 &749317862 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1304339320}
+--- !u!1001 &755602958
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (50)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &755602959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 755602958}
+--- !u!1001 &770074565
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (44)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &798965686 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 2095091165}
+--- !u!4 &809413899 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 553765315}
+--- !u!1001 &812274754
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &814451675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1703101785}
+--- !u!4 &816831006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 400209304}
+--- !u!4 &837921668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1707270905}
+--- !u!4 &840273998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 58905521}
+--- !u!1001 &867563765
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &887993094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1533701164}
+--- !u!4 &908136088 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1042060106}
+--- !u!4 &908767538 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1687862648}
+--- !u!1001 &921306018
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &936586993
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &960520745
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &965866577
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (40)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &970071637
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (39)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &974229642
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +1910,103 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &975892444
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &983139640
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (47)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1029150095 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1066898899}
 --- !u!1 &1035459906
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,11 +2040,2299 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1035459906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 974229643}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &1036210952 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1076824058}
+--- !u!1001 &1042060106
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1065829875
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (36)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1066898899
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1074577864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 210550130}
+--- !u!1001 &1076824058
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (26)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1093226954
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1096222681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1634741005}
+--- !u!4 &1101011222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1975038726}
+--- !u!4 &1107596816 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 593084202}
+--- !u!1001 &1115299092
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1122322239
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1127848980 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 936586993}
+--- !u!4 &1142816473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1471041694}
+--- !u!1001 &1153692087
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1161546518
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (48)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1161657241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1896738984}
+--- !u!1001 &1221095962
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (28)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1235579826 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 960520745}
+--- !u!1001 &1247604112
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (35)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1259945228
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (31)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1264059442 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1793293605}
+--- !u!1001 &1283383764
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.24881887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1291656220
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1304339320
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1311711608 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1780928429}
+--- !u!1001 &1337684728
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1344345567 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 559836228}
+--- !u!4 &1344695550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1595001699}
+--- !u!4 &1361304340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 184247694}
+--- !u!1001 &1371925051
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (46)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1417360385 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 596329786}
+--- !u!4 &1431933677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 2025500310}
+--- !u!4 &1443881741 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1259945228}
+--- !u!1001 &1471041694
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (42)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1490298097 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 273725537}
+--- !u!1001 &1491968116
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1533701164
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1535756834 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 563069512}
+--- !u!1001 &1538847036
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1549391657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 611902910}
+--- !u!1001 &1564725457
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1579902260
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.2488189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1595001699
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (24)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1621858830 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1718279246}
+--- !u!1001 &1634741005
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (34)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1660715092
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (41)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1687862648
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1703101785
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1707270905
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1718279246
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (29)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1722522468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1491968116}
+--- !u!1001 &1751921804
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1766078123 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 970071637}
+--- !u!4 &1767047370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1093226954}
+--- !u!1001 &1776488243
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.472
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1777097304 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1283383764}
+--- !u!1001 &1780928429
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (23)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1784206502 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 624702566}
+--- !u!1001 &1789074293
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1793293605
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1799769315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 983139640}
+--- !u!4 &1805304635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337684728}
+--- !u!1001 &1845144048
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405359276608760, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b454e1496623fd49a99f4f2bf74e46a, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1857920538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1857920539}
+  m_Layer: 0
+  m_Name: Roof
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1857920539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1857920538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1978099007}
+  - {fileID: 1621858830}
+  - {fileID: 798965686}
+  - {fileID: 1443881741}
+  - {fileID: 1535756834}
+  - {fileID: 1361304340}
+  - {fileID: 1096222681}
+  - {fileID: 663044579}
+  - {fileID: 1874633605}
+  - {fileID: 111331555}
+  - {fileID: 1107596816}
+  - {fileID: 1766078123}
+  - {fileID: 1888697482}
+  - {fileID: 2080836779}
+  - {fileID: 1142816473}
+  - {fileID: 211814170}
+  - {fileID: 1431933677}
+  - {fileID: 2560173}
+  - {fileID: 1909195576}
+  - {fileID: 1799769315}
+  - {fileID: 2041492667}
+  - {fileID: 419303647}
+  - {fileID: 755602959}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1874633605 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1065829875}
+--- !u!4 &1888697482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 965866577}
+--- !u!1001 &1896738984
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.5092554
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1909195576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1371925051}
+--- !u!4 &1913200213 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 691261561}
+--- !u!1001 &1930633611
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 339380296}
+    m_Modifications:
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.4907446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.7511811
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378684080212968, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+      propertyPath: m_Name
+      value: CaveWallBlock_Rock (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dda9f17eb7e09bf458f0ebf004b44ac2, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1960996400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 256590262}
+--- !u!4 &1963290074 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 407075623}
+--- !u!1001 &1975038726
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (25)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1978099007 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1221095962}
+--- !u!1 &1989568207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989568208}
+  m_Layer: 0
+  m_Name: Floor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1989568208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1989568207}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1074577864}
+  - {fileID: 741679786}
+  - {fileID: 1960996400}
+  - {fileID: 837921668}
+  - {fileID: 814451675}
+  - {fileID: 1344345567}
+  - {fileID: 809413899}
+  - {fileID: 1029150095}
+  - {fileID: 54292186}
+  - {fileID: 2029191566}
+  - {fileID: 1417360385}
+  - {fileID: 908136088}
+  - {fileID: 2022728858}
+  - {fileID: 289913960}
+  - {fileID: 1235579826}
+  - {fileID: 816831006}
+  - {fileID: 2046496078}
+  - {fileID: 1913200213}
+  - {fileID: 233816787}
+  - {fileID: 2085333172}
+  - {fileID: 1264059442}
+  - {fileID: 687533179}
+  - {fileID: 1767047370}
+  - {fileID: 1311711608}
+  - {fileID: 1344695550}
+  - {fileID: 1101011222}
+  - {fileID: 1036210952}
+  - {fileID: 840273998}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2022728858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 587766242}
+--- !u!4 &2024461425 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 867563765}
+--- !u!1001 &2025500310
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (43)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &2029191566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 537276867}
+--- !u!4 &2041492667 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1161546518}
+--- !u!4 &2046496078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1153692087}
+--- !u!1001 &2050910054
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (45)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &2080836779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1660715092}
+--- !u!4 &2082332658 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4053921581583014, guid: dda9f17eb7e09bf458f0ebf004b44ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 577913325}
+--- !u!4 &2085333172 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1564725457}
+--- !u!1001 &2095091165
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1857920539}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (30)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &2138701536
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1989568208}
+    m_Modifications:
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705699354314760, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+      propertyPath: m_Name
+      value: CaveRoof_Rock (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33c08ef6a6ce70a4daa499c476e1defe, type: 2}
+  m_IsPrefabAsset: 0

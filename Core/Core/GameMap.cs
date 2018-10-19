@@ -99,5 +99,15 @@ namespace Core
             get { return map[x, y]; }
             set { map[x, y] = value; }
         }
+
+        public int getWidth()
+        {
+            return map.GetUpperBound(0) + 1;
+        }
+
+        public int getHeight()
+        {
+            return map.GetUpperBound(1) + 1;
+        }
     }
 }

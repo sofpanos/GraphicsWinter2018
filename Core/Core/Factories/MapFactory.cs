@@ -156,7 +156,8 @@ namespace Core.Factories
                     previousRoom = currentRoom;
                     continue;
                 }
-                previousHall = currentHall = HallwayFactory.getHallway(String.Format(HALLWAY_ID_FORMAT_STRING, id++), previousRoom, previousHall, currentRoom, map);
+                previousHall = currentHall = HallwayFactory.getHallway(String.Format(HALLWAY_ID_FORMAT_STRING, id++), previousRoom, previousHall, currentRoom, map, random);
+                map.addHallway(currentHall.getID(), currentHall);
             }
         }
 

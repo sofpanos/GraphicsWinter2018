@@ -4,6 +4,5 @@ E:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\Core\Core\obj\Debug\
 E:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\Core\Core\obj\Debug\Core.pdb
 E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\bin\Debug\Core.dll
 E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\bin\Debug\Core.pdb
-E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
 E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\obj\Debug\Core.dll
 E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\Core\obj\Debug\Core.pdb
