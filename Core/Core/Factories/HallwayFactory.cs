@@ -18,6 +18,7 @@ namespace Core.Factories
             List<Position> path = new List<Position>();
             Position entrance = new Position();//Αρχικοποιήση πρως ικανοποίηση του compiler
             Position exit = new Position();//Το ίδιο
+
             while (path.Count == 0)
             {
                 entrance = createHallwayEntrance(previousRoom, previousHall, triesToCreateExit, map, random);
@@ -134,7 +135,8 @@ namespace Core.Factories
             Position passage = new Position();//Αρχικοποίηση για την ικανοποίηση του compiler
             while (!created)
             {
-                passage = roomWallPositions[random.Next(roomWallPositions.Count)]; //Επιλογή τυχαίας θέσης
+                int index = random.Next(roomWallPositions.Count);
+                passage = roomWallPositions[index];                                     //Επιλογή τυχαίας θέσης
                 created = isValidPassage(passage, map);                            //Έλεγχος εγγυρότητας θέσης
             }
             return passage;
@@ -148,11 +150,11 @@ namespace Core.Factories
                 && passage.getY() < map.getHeight() - MIN_PASSAGE_X_OR_Y;
             //Έλεγχος προσβασιμότητας.
             //Οριζόντια
-            bool reachable = map[passage.getX() + 1, passage.getY()] == BlockType.Floor 
-                && map[passage.getX() - 1, passage.getY()] == BlockType.Floor;
+            bool reachable = map[passage.getX() + 1, passage.getY()] != BlockType.Wall && map[passage.getX() - 1, passage.getY()] != BlockType.Wall
+                && map[passage.getX(), passage.getY() + 1] == BlockType.Wall && map[passage.getX(), passage.getY() - 1] == BlockType.Wall;
             //Κάθετα
-            reachable = reachable || map[passage.getX(), passage.getY() + 1] == BlockType.Floor 
-                && map[passage.getX(), passage.getY() - 1] == BlockType.Floor;
+            reachable = reachable || map[passage.getX(), passage.getY() + 1] != BlockType.Wall && map[passage.getX(), passage.getY() - 1] != BlockType.Wall
+                && map[passage.getX() + 1, passage.getY()] == BlockType.Wall && map[passage.getX() - 1, passage.getY()] == BlockType.Wall;
             return validDistanceFromEdge && reachable;
         }
     }

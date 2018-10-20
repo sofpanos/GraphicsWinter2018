@@ -79,8 +79,8 @@ namespace Core.Utility
 
         public bool contains(Position pos)
         {
-            bool result = this.x <= pos.getX() && pos.getX() <= this.x + width - 1;
-            result &= this.y <= pos.getY() && pos.getY() <= this.y + height - 1;
+            bool result = this.x <= pos.getX() && pos.getX() < this.x + width;
+            result = result && this.y <= pos.getY() && pos.getY() < this.y + height;
             return result;
         }
 

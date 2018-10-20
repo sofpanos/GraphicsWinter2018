@@ -20,6 +20,7 @@ namespace Core.Utility.AStar
             this.validPathNode = validPath;
             this.start = false;
             this.gScore = int.MaxValue;
+            calculateHScore();
         }
 
         public Node(Position pos, Position goal, bool validPath, bool start)
@@ -28,8 +29,8 @@ namespace Core.Utility.AStar
             this.goal = goal;
             this.validPathNode = validPath;
             this.start = start;
-            this.gScore = 0;
-            this.hScore = 0;
+            this.gScore = start ? 0 : int.MaxValue;
+            calculateHScore();
         }
 
         public Node getPreviousNode()
@@ -83,7 +84,6 @@ namespace Core.Utility.AStar
         {
             if (calculateGScore(previous))
             {
-                calculateHScore();
                 return true;
             }
             return false;
@@ -91,6 +91,10 @@ namespace Core.Utility.AStar
 
         private bool calculateGScore(Node previous)
         {
+            if (this.start)
+            {
+                return false;
+            }
             if (previous == null)
             {
                 gScore = int.MaxValue;
@@ -100,7 +104,7 @@ namespace Core.Utility.AStar
             if (this.previousNode == null && !this.start)
             {
                 this.previousNode = previous;
-                this.gScore = recursCalcGScore(previous);
+                this.gScore = recursCalcGScore(previous) + nextNodeCost(previous.nodePosition);
                 return true;
             }
 
@@ -143,6 +147,18 @@ namespace Core.Utility.AStar
                 return true;
             }
             return false;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if(obj is Node)
+                return Equals((Node)obj);
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.nodePosition.GetHashCode();
         }
 
         private static int recursCalcGScore(Node theNode)

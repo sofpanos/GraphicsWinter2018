@@ -17,7 +17,6 @@ namespace Core.Factories
         public static GameMap getNewGameMap(int width, int height, int level)
         {
             GameMap theMap = new GameMap(width, height);
-            initializeMapArray(theMap, width, height);
             
             Random random = new Random();
             List<Section> sections = createSections(width, height, random);
@@ -34,7 +33,6 @@ namespace Core.Factories
         public static GameMap getNewGameMap(int width, int height,int level, int seed)
         {
             GameMap theMap = new GameMap(width, height);
-            initializeMapArray(theMap, width, height);
             
             Random random = new Random(seed);
             List<Section> sections = createSections(width, height, random);
@@ -58,21 +56,17 @@ namespace Core.Factories
             theMap[exitSwitch.getX(), exitSwitch.getY()] = BlockType.ExitSwitch;
         }
 
-        private static void initializeMapArray(GameMap mapArray, int width, int height)
-        {
-            //Να ελέγξουμε αν γίνεται με foreach γιατί στη java με passed by value types δε δουλεύει.
-            
-        }
-
         private static List<Section> createSections(int width, int height, Random random)
         {
             List<Section> theSections = new List<Section>();
-            width -= 10;
-            height -= 10;
-            int xStart = 4;
-            int yStart = 5;
+            width -= 10;  // Αφαιρούμε την απόσταση "ασφάλειας" από την άκρη του κόσμου.
+            height -= 10; // Το ίδιο
+            int xStart = 5; //Αρχίζουμε από το 0 + την απόσταση "ασφάλειας" από την άκρη.
+            int yStart = 5; //Το ίδιο
 
-            int numOfSlices = random.Next(width / MAX_SLICE_SIZE, width / MIN_SLICE_SIZE);
+            int minSliceWidth = width / MAX_SLICE_SIZE;
+            int maxSliceWidth = width / MIN_SLICE_SIZE;
+            int numOfSlices = random.Next(minSliceWidth, maxSliceWidth);
             int sliceWidth = width / numOfSlices;
             int restWidth = width % numOfSlices;
 
@@ -96,11 +90,10 @@ namespace Core.Factories
                         do
                         {
                             sliceHeight = random.Next(MIN_SLICE_SIZE, height);
-                        } while (height - sliceHeight >= MIN_SLICE_SIZE && height - sliceHeight <= MAX_SLICE_SIZE 
-                            && sliceHeight <= MAX_SLICE_SIZE);
+                        } while (Math.Abs(height - sliceHeight) < MIN_SLICE_SIZE || sliceHeight < MIN_SLICE_SIZE);
 
                         temp.Add(new Section(xStart, yStart, sliceWidth, sliceHeight));
-                        temp.Add(new Section(xStart, yStart + sliceHeight, sliceWidth, sliceHeight));
+                        temp.Add(new Section(xStart, yStart + sliceHeight, sliceWidth, height - sliceHeight));
                     }
                 }
                 else
@@ -158,6 +151,7 @@ namespace Core.Factories
                 }
                 previousHall = currentHall = HallwayFactory.getHallway(String.Format(HALLWAY_ID_FORMAT_STRING, id++), previousRoom, previousHall, currentRoom, map, random);
                 map.addHallway(currentHall.getID(), currentHall);
+                previousRoom = currentRoom;
             }
         }
 

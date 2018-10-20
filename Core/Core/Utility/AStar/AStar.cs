@@ -64,30 +64,32 @@ namespace Core.Utility.AStar
             {
                 openSet.Sort((node1, node2) => node1.getFScore() - node2.getFScore());
                 current = openSet[0];
+                openSet.Remove(current);
 
-                Node[] neighboors = getNeighboorNodes(current, gridNodes);
-                foreach(Node neighboor in neighboors)
+                if (current.getPosition().Equals(goal))
+                    return current;
+                
+                if (!current.isValidPathNode())
+                    continue;
+
+                List<Node> neighbors = getNeighborNodes(current, gridNodes);
+                foreach(Node neighbor in neighbors)
                 {
-                    if (closedSet.Contains(neighboor))//If node evaluated
+                    if (closedSet.Contains(neighbor))//If node evaluated
                         continue;
 
-                    if (!openSet.Contains(neighboor))
+                    if (!openSet.Contains(neighbor))
                     {
-                        neighboor.update(current);
-                        openSet.Add(neighboor);
+                        neighbor.update(current);
+                        openSet.Add(neighbor);
                     }
                     else
                     {
-                        if (neighboor.update(current))
+                        if (neighbor.update(current))
                         {
-                            openSet.Remove(neighboor);
-                            openSet.Add(neighboor);
+                            openSet.Remove(neighbor);
+                            openSet.Add(neighbor);
                         }
-                    }
-
-                    if (neighboor.getPosition().Equals(goal))
-                    {
-                        return neighboor;
                     }
                 }
                 closedSet.Add(current);
@@ -95,22 +97,21 @@ namespace Core.Utility.AStar
             return null;
         }
 
-        private static Node[] getNeighboorNodes(Node current, Node[,] gridNodes)
+        private static List<Node> getNeighborNodes(Node current, Node[,] gridNodes)
         {
-            Node[] neighboors = new Node[8];
-            int count = 0;
+            List<Node> neighbors = new List<Node>(8);
             for (int x = current.getPosition().getX(); x <= current.getPosition().getX() + 1; x++)
             {
                 for (int y = current.getPosition().getY(); y <= current.getPosition().getY() + 1; y++)
                 {
                     if (x < 0 || y < 0 || x > gridNodes.GetUpperBound(0) || y > gridNodes.GetUpperBound(1))
-                    {
                         continue;
-                    }
-                    neighboors[count++] = gridNodes[x, y];
+                    else if (x == current.getPosition().getX() && y == current.getPosition().getY())
+                        continue;
+                    neighbors.Add(gridNodes[x, y]);
                 }
             }
-            return neighboors;
+            return neighbors;
         }
     }
 }

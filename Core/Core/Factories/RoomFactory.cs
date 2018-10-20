@@ -189,7 +189,7 @@ namespace Core.Factories
             }
             for (int neighboorX = x - 1; neighboorX <= x + 1; neighboorX++)
             {
-                for (int neighboorY = y - 1; neighboorY <= x + 1; neighboorY++)
+                for (int neighboorY = y - 1; neighboorY <= y + 1; neighboorY++)
                 {
                     if (neighboorX == x && neighboorY == y)
                     {
