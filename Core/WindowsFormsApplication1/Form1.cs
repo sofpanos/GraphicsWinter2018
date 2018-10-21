@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Core;
 using Core.Utility;
 using Core.Factories;
+using Core.Constructions;
 
 namespace WindowsFormsApplication1
 {
@@ -17,18 +18,37 @@ namespace WindowsFormsApplication1
     {
         private GameMap map;
         private bool finished = false;
+        
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void StartButton_Click(object sender, EventArgs e)
         {
+            if (!finished)
+            {
+                map = MapFactory.getNewGameMap((this.Width - 10) / 3, (this.Height - 10) / 3, 0);
+                this.StartButton.Visible = false;
+                this.Refresh();
+            }
+                
+            finished = true;
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
             if (finished)
             {
-                for (int x = 0; x < map.getWidth(); x++)
+                int width = map.getWidth();
+                int height = map.getHeight();
+                SolidBrush wallBrush = new SolidBrush(Color.Brown);
+                SolidBrush floorBrush = new SolidBrush(Color.Green);
+                Graphics formGraphics = this.CreateGraphics();
+                for (int x = 0; x < width; x++)
                 {
-                    for (int y = 0; y < map.getHeight(); x++)
+                    for (int y = 0; y < height; y++)
                     {
                         switch (map[x, y])
                         {
@@ -36,36 +56,21 @@ namespace WindowsFormsApplication1
                             case BlockType.ExitSwitch:
                             case BlockType.Switch:
                             case BlockType.Wall:
-                                e.Graphics.FillRectangle(new SolidBrush(Color.Brown), new System.Drawing.Rectangle(x * 2, y * 2, 2, 2));
+                                formGraphics.FillRectangle(wallBrush, new System.Drawing.Rectangle(x * 3, y * 3, 3, 3));
                                 break;
                             case BlockType.Floor:
                             case BlockType.Light:
-                                e.Graphics.FillRectangle(new SolidBrush(Color.Green), new System.Drawing.Rectangle(x * 2, y * 2, 2, 2));
+                                formGraphics.FillRectangle(floorBrush, new System.Drawing.Rectangle(x * 3, y * 3, 3, 3));
                                 break;
                             default:
                                 continue;
                         }
                     }
                 }
+                wallBrush.Dispose();
+                floorBrush.Dispose();
+                formGraphics.Dispose();
             }
-        }
-
-        private void StartButton_Click(object sender, EventArgs e)
-        {
-            if (!finished && !backgroundWorker1.IsBusy)
-                map = MapFactory.getNewGameMap((panel1.Width - 20) / 2, (panel1.Height - 20) / 2, 0);
-            finished = true;
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            map = MapFactory.getNewGameMap((panel1.Width - 20) / 2, (panel1.Height - 20) / 2, 0);
-        }
-
-        private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
-        {
-            StartButton.Visible = false;
-            finished = true;
         }
 
     }

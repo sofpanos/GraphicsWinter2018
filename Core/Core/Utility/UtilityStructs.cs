@@ -110,7 +110,7 @@ namespace Core.Utility
 
         public bool isWalkable()
         {
-            return !(this.type == Wall || this.type == Floor);
+            return this.type != Wall && this.type != Floor;
         }
     }
 }

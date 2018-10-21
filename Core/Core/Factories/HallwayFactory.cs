@@ -21,7 +21,7 @@ namespace Core.Factories
 
             while (path.Count == 0)
             {
-                entrance = createHallwayEntrance(previousRoom, previousHall, triesToCreateExit, map, random);
+                entrance = createHallwayEntrance(previousRoom, previousHall, triesToCreateExit++, map, random);
                 exit = getExit(nextRoom, map, random);
                 WalkableTile[,] walkableMap = initializeWalkable(map);
                 path = AStar.findPath(entrance, exit, walkableMap);
@@ -35,6 +35,8 @@ namespace Core.Factories
         private static Position getExit(Room nextRoom, GameMap map, Random random)
         {
             Position exit = getPassage(nextRoom.getWallPositions(), map, random);
+            if (nextRoom.getEntrance() != null)
+                switchFloorWallTile(map, (Position)nextRoom.getEntrance());
             nextRoom.setEntrance(exit);
             switchFloorWallTile(map, exit);
             return exit;
@@ -54,7 +56,8 @@ namespace Core.Factories
                 {
                     continue;
                 }
-                foreach (Position neighbor in getNeighbors(step))
+                List<Position> neighbors = getNeighbors(step);
+                foreach (Position neighbor in neighbors)
                 {
                     if (path.Contains(neighbor))
                     {
@@ -71,7 +74,7 @@ namespace Core.Factories
             return wall;
         }
 
-        private static IEnumerable<Position> getNeighbors(Position pos)
+        private static List<Position> getNeighbors(Position pos)
         {
             List<Position> neighbors = new List<Position>();
             for (int x = pos.getX() - 1; x <= pos.getX() + 1; x++)
@@ -107,6 +110,7 @@ namespace Core.Factories
                             walkable = new WalkableTile(WalkableTile.Nothing);
                             break;
                     }
+                    walkables[x, y] = walkable;
                 }
             }
             return walkables;
@@ -115,14 +119,22 @@ namespace Core.Factories
         private static Position createHallwayEntrance(Room previousRoom, Hallway previousHall, int tries, GameMap map, Random random)
         {
             Position entrance;
-            if (tries < MAX_ATEMPTS_FOR_EXIT)
+            if (tries < MAX_ATEMPTS_FOR_EXIT || previousHall == null)
             {
                 entrance = getPassage(previousRoom.getWallPositions(), map, random);
+                if (previousRoom.getExit() != null)
+                {
+                    switchFloorWallTile(map, (Position)previousRoom.getExit());
+                }
                 previousRoom.setExit(entrance);
             }
             else
             {
                 entrance = getPassage(previousHall.getWallPositions(), map, random);
+                if (previousHall.getIntersection() != null)
+                {
+                    switchFloorWallTile(map, (Position)previousHall.getIntersection());
+                }
                 previousHall.setIntersection(entrance);
             }
             switchFloorWallTile(map, entrance);
@@ -148,6 +160,11 @@ namespace Core.Factories
             bool validDistanceFromEdge = passage.getX() >= MIN_PASSAGE_X_OR_Y && passage.getY() >= MIN_PASSAGE_X_OR_Y;
             validDistanceFromEdge = validDistanceFromEdge && passage.getX() < map.getWidth() - MIN_PASSAGE_X_OR_Y 
                 && passage.getY() < map.getHeight() - MIN_PASSAGE_X_OR_Y;
+            
+            if (!validDistanceFromEdge)
+            {
+                return false; //Στη περίπτωση που δεν έχει την απαιτούμενη απόσταση να επιστρέψει false.
+            }
             //Έλεγχος προσβασιμότητας.
             //Οριζόντια
             bool reachable = map[passage.getX() + 1, passage.getY()] != BlockType.Wall && map[passage.getX() - 1, passage.getY()] != BlockType.Wall
@@ -155,7 +172,7 @@ namespace Core.Factories
             //Κάθετα
             reachable = reachable || map[passage.getX(), passage.getY() + 1] != BlockType.Wall && map[passage.getX(), passage.getY() - 1] != BlockType.Wall
                 && map[passage.getX() + 1, passage.getY()] == BlockType.Wall && map[passage.getX() - 1, passage.getY()] == BlockType.Wall;
-            return validDistanceFromEdge && reachable;
+            return reachable;//To validDistance ελέγχθηκε πιο πριν, δε χρειάζεται ξανά.
         }
     }
 }

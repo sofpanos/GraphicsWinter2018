@@ -25,7 +25,7 @@ namespace Core
 
         private void initializeMap()
         {
-            for (int x = 0; x < map.GetUpperBound(0); x++)
+            for (int x = 0; x <= map.GetUpperBound(0); x++)
             {
                 for (int y = 0; y <= map.GetUpperBound(1); y++)
                 {
