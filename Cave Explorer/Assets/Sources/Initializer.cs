@@ -42,10 +42,38 @@ public class Initializer : MonoBehaviour {
         newPlayer.transform.position = new Vector3(playerPosition.getX() * 2, 2, playerPosition.getY() * 2);
         newPlayer.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
         */
-        map = MapFactory.getNewGameMap(300, 200, 1);
+        map = MapFactory.getNewGameMap(300, 80, 1);
         bool first = true;
-        int id = 0;
-        foreach (Room room in map.getRooms())
+		for(int x = 0; x < map.getWidth();x ++)
+		{
+			for(int y = 0; y < map.getHeight(); y++)
+			{
+				if (map[x, y] == BlockType.Floor || map[x, y] == BlockType.Light)
+				{
+					if (first)
+					{
+						Position playerPosition = new Position(x, y);
+						GameObject newPlayer = (GameObject)GameObject.Find("Player");
+						newPlayer.transform.position = new Vector3(playerPosition.getX() * 2, 2, playerPosition.getY() * 2);
+						newPlayer.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
+						first = false;
+					}
+					GameObject roomFloor = (GameObject)Instantiate(floor);
+					Vector3 floorTransPos = new Vector3(x * 2, 0, y * 2);
+					roomFloor.transform.position = floorTransPos;
+					roomFloor.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
+				}
+				else if (map[x, y] == BlockType.Wall || map[x,y] != BlockType.Nothing)
+				{
+					GameObject roomWall = (GameObject)Instantiate(wall);
+					Vector3 wallTransPos = new Vector3(x * 2, 2, y * 2);
+					roomWall.transform.position = wallTransPos;
+					roomWall.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
+				}
+
+			}
+		}/*
+		foreach (Room room in map.getRooms())
         {
             GameObject roomObject = new GameObject();
             roomObject.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
@@ -90,7 +118,7 @@ public class Initializer : MonoBehaviour {
                 hallFloor.transform.position = floorTransPos;
                 hallFloor.transform.SetParent(hallObject.transform);
             }
-        }
+        }*/
 	}
 	
 	// Update is called once per frame
