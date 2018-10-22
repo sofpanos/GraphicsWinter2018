@@ -7,8 +7,8 @@ namespace Core.Factories
 {
     public class MapFactory
     {
-        private const int MAX_SLICE_SIZE = 20;
-        private const int MIN_SLICE_SIZE = 12;
+        private const int MIN_NUM_OF_SLICES = 2;
+        private const int MIN_SLICE_SIZE = 30;
         private const string ROOM_ID_FORMAT_STRING = "R{0,3:D3}";
         private const string HALLWAY_ID_FORMAT_STRING = "H{0,3:D3}";
         private const int START_ID_NUM = 1;
@@ -64,9 +64,8 @@ namespace Core.Factories
             int xStart = 5; //Αρχίζουμε από το 0 + την απόσταση "ασφάλειας" από την άκρη.
             int yStart = 5; //Το ίδιο
 
-            int minSliceWidth = width / MAX_SLICE_SIZE;
-            int maxSliceWidth = width / MIN_SLICE_SIZE;
-            int numOfSlices = random.Next(minSliceWidth, maxSliceWidth);
+            int maxNumOfSlices = width / MIN_SLICE_SIZE;
+            int numOfSlices = random.Next(MIN_NUM_OF_SLICES, maxNumOfSlices);
             int sliceWidth = width / numOfSlices;
             int restWidth = width % numOfSlices;
 
@@ -86,11 +85,7 @@ namespace Core.Factories
                     else
                     {
                         //Βρες το σημείο της οριζόντιας τομής.
-                        //+Έλεγχος εγκυρότητας
-                        do
-                        {
-                            sliceHeight = random.Next(MIN_SLICE_SIZE, height);
-                        } while (Math.Abs(height - sliceHeight) < MIN_SLICE_SIZE || sliceHeight < MIN_SLICE_SIZE);
+                        sliceHeight = random.Next(MIN_SLICE_SIZE, height - MIN_SLICE_SIZE);
 
                         temp.Add(new Section(xStart, yStart, sliceWidth, sliceHeight));
                         temp.Add(new Section(xStart, yStart + sliceHeight, sliceWidth, height - sliceHeight));
@@ -104,7 +99,7 @@ namespace Core.Factories
                 //40% πιθανότητα για έξτρα πλάτος.
                 if (restWidth != 0 && random.NextDouble() <= 0.4)
                 {
-                    int extraWidth = random.Next(1, restWidth);
+                    int extraWidth = random.Next(1, restWidth + 1);
                     restWidth -= extraWidth;
                     
                     foreach(Section sectionItem in temp)
@@ -139,7 +134,7 @@ namespace Core.Factories
             {
                 map.addRoom(String.Format(ROOM_ID_FORMAT_STRING, id), RoomFactory.getRoom(current,String.Format(ROOM_ID_FORMAT_STRING, id++), random));
             }
-            return; //Debug
+            
             id = START_ID_NUM;
             Hallway currentHall = null;
             foreach (Room currentRoom in map.getRooms())

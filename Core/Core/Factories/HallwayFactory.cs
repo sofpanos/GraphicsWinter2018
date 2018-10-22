@@ -158,7 +158,7 @@ namespace Core.Factories
         {
             //Έλεγχος της απόστασης από την άκρη του χάρτη.
             bool validDistanceFromEdge = passage.getX() >= MIN_PASSAGE_X_OR_Y && passage.getY() >= MIN_PASSAGE_X_OR_Y;
-            validDistanceFromEdge = validDistanceFromEdge && passage.getX() < map.getWidth() - MIN_PASSAGE_X_OR_Y 
+            validDistanceFromEdge = validDistanceFromEdge && passage.getX() < map.getWidth() - MIN_PASSAGE_X_OR_Y
                 && passage.getY() < map.getHeight() - MIN_PASSAGE_X_OR_Y;
             
             if (!validDistanceFromEdge)

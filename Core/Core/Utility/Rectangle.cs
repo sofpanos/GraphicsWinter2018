@@ -19,8 +19,8 @@ namespace Core.Utility
 
         public Rectangle(Section section)
         {
-            this.x = section.getXOff();
-            this.y = section.getYOff();
+            this.x = section.getX();
+            this.y = section.getY();
             this.width = section.getWidth();
             this.height = section.getHeight();
         }

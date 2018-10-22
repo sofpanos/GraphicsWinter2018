@@ -8,7 +8,7 @@ namespace Core.Utility.AStar
     public class AStar
     {
         public const int VERTICAL_HORIZONTAL_SCORE = 5;
-        public const int DIAGONAL_SCORE = 20;
+        public const int DIAGONAL_SCORE = 25;
 
         public static List<Position> findPath(Position start, Position goal, WalkableTile[,] grid)
         {

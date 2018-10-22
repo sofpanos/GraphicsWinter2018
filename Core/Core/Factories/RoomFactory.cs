@@ -15,16 +15,15 @@ namespace Core.Factories
         {
             int numberOfRects = random.Next(1, 8);
             Rectangle[] roomRectangles = createRoomRectangles(mapSection, numberOfRects, random);
-            Room newRoom = getRoom(mapSection, roomRectangles);
-            setRoomComponents(newRoom, roomRectangles);
-            newRoom.setID(id);
+            Room newRoom = getRoom(mapSection, roomRectangles, id);
+            
             return newRoom;
         }
 
         private static Rectangle[] createRoomRectangles(Section mapSection, int numberOfRectangles, Random random)
         {
             Rectangle[] roomRects = new Rectangle[numberOfRectangles];
-            for (int rect = 0; rect < roomRects.Length; rect++)
+            for (int rect = 0; rect < numberOfRectangles; rect++)
             {
                 bool validRect = false;
                 do
@@ -35,39 +34,35 @@ namespace Core.Factories
                     int rectHeight = 0;
 
                     //create x coordinate for the rectangle
-                    do
-                    {
-                        rectX = random.Next(mapSection.getXOff() + Room.MIN_DISTANCE_FROM_SECTION_EDGE,
-                            mapSection.getXOff() + mapSection.getWidth() - Room.MIN_DISTANCE_FROM_SECTION_EDGE);
-                    } while (Room.MIN_WIDTH_HEIGHT >= mapSection.getWidth()
-                        - (rectX - mapSection.getXOff() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - 1));
-
+                    int minX = mapSection.getX() + Room.MIN_DISTANCE_FROM_SECTION_EDGE + 1;
+                    int maxX = mapSection.getX() + mapSection.getWidth() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - Room.MIN_WIDTH_HEIGHT;
+                    rectX = random.Next(minX, maxX);
+                    
                     //create y coordinate for the rectangle
-                    do
-                    {
-                        rectY = random.Next(mapSection.getYOff() + Room.MIN_DISTANCE_FROM_SECTION_EDGE
-                            , mapSection.getYOff() + mapSection.getHeight() - Room.MIN_DISTANCE_FROM_SECTION_EDGE);
-                    } while (Room.MIN_WIDTH_HEIGHT >= mapSection.getHeight() - (rectY - mapSection.getYOff() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - 1));
-
+                    int minY = mapSection.getY() + Room.MIN_DISTANCE_FROM_SECTION_EDGE + 1;
+                    int maxY = mapSection.getY() + mapSection.getHeight() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - Room.MIN_WIDTH_HEIGHT;
+                    rectY = random.Next(minY, maxY);
+                    
                     //create width for the rectangle
-                    if (Room.MIN_WIDTH_HEIGHT == mapSection.getWidth() - (rectX - mapSection.getXOff() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - 1))
+                    if (rectX == maxX - 1)
                     {
                         rectWidth = Room.MIN_WIDTH_HEIGHT;
                     }
                     else
                     {
-                        rectWidth = random.Next(Room.MIN_WIDTH_HEIGHT
-                            , mapSection.getWidth() - (rectX - mapSection.getXOff() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - 1));
+                        int maxWidth = maxX - rectX + Room.MIN_WIDTH_HEIGHT;
+                        rectWidth = random.Next(Room.MIN_WIDTH_HEIGHT, maxWidth);
                     }
 
                     //create height for the rectangle
-                    if (Room.MIN_WIDTH_HEIGHT == mapSection.getHeight() - (rectY - mapSection.getYOff() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - 1))
+                    if (Room.MIN_WIDTH_HEIGHT == maxY - 1)
                     {
                         rectHeight = Room.MIN_WIDTH_HEIGHT;
                     }
                     else
                     {
-                        rectHeight = random.Next(Room.MIN_WIDTH_HEIGHT, mapSection.getHeight() - (rectY - mapSection.getYOff() - Room.MIN_DISTANCE_FROM_SECTION_EDGE - 1));
+                        int maxHeight = maxY - rectY + Room.MIN_WIDTH_HEIGHT;
+                        rectHeight = random.Next(Room.MIN_WIDTH_HEIGHT, maxHeight);
                     }
 
                     Rectangle roomRect = new Rectangle(rectX, rectY, rectWidth, rectHeight);
@@ -115,12 +110,12 @@ namespace Core.Factories
             return false;
         }
 
-        private static Room getRoom(Section mapSection, Rectangle[] roomRectangles)
+        private static Room getRoom(Section mapSection, Rectangle[] roomRectangles, string id)
         {
-            int minX = mapSection.getXOff() + mapSection.getWidth();
-            int minY = mapSection.getYOff() + mapSection.getHeight();
-            int maxX = mapSection.getXOff();
-            int maxY = mapSection.getYOff();
+            int minX = mapSection.getX() + mapSection.getWidth();
+            int minY = mapSection.getY() + mapSection.getHeight();
+            int maxX = mapSection.getX();
+            int maxY = mapSection.getY();
 
             foreach (Rectangle rect in roomRectangles)
             {
@@ -148,25 +143,27 @@ namespace Core.Factories
                 }
             }
 
-            if (minX != mapSection.getXOff())
+            if (minX != mapSection.getX())
             {
                 minX--;
             }
 
-            if (minY != mapSection.getYOff())
+            if (minY != mapSection.getY())
             {
                 minY--;
             }
-            if (maxX != mapSection.getXOff() + mapSection.getWidth())
+            if (maxX != mapSection.getX() + mapSection.getWidth())
             {
                 maxX++;
             }
-            if (maxY != mapSection.getYOff() + mapSection.getWidth())
+            if (maxY != mapSection.getY() + mapSection.getWidth())
             {
                 maxY++;
             }
-
-            return new Room(minX, minY, maxX - minX + 1, maxY - minY + 1);
+            Room room = new Room(minX, minY, maxX - minX + 1, maxY - minY + 1);
+            setRoomComponents(room, roomRectangles);
+            room.setID(id);
+            return room;
         }
 
         public static bool isRoomPosition(int x, int y, Rectangle[] roomRectangles)
@@ -210,9 +207,9 @@ namespace Core.Factories
             List<Position> roomPositions = new List<Position>();
             List<Position> wallPositions = new List<Position>();
 
-            for (int x = roomContainer.getXOff(); x < roomContainer.getXOff() + roomContainer.getWidth(); x++)
+            for (int x = roomContainer.getX(); x < roomContainer.getX() + roomContainer.getWidth(); x++)
             {
-                for (int y = roomContainer.getYOff(); y < roomContainer.getYOff() + roomContainer.getHeight(); y++)
+                for (int y = roomContainer.getY(); y < roomContainer.getY() + roomContainer.getHeight(); y++)
                 {
                     if (isRoomPosition(x, y, roomRectangles))
                     {
