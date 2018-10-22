@@ -13,7 +13,7 @@ namespace Core.Utility
 
         public int GetHashCode(Node node1)
         {
-            return node1.getPosition().getX() + node1.getPosition().getY();
+            return node1.Position.GetHashCode();
         }
     }
 }

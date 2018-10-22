@@ -25,7 +25,7 @@ namespace Core
 
         private void initializeMap()
         {
-            for (int x = 0; x < map.GetUpperBound(0); x++)
+            for (int x = 0; x <= map.GetUpperBound(0); x++)
             {
                 for (int y = 0; y <= map.GetUpperBound(1); y++)
                 {
@@ -51,13 +51,13 @@ namespace Core
         {
             hallways.Add(ID, hallway);
             //Ενημέρωση του 2D Πίνακα
-            foreach (Position wall in hallway.getPath())
+            foreach (Position floor in hallway.getPath())
             {
-                this.map[wall.getX(), wall.getY()] = BlockType.Floor;
+                this.map[floor.getX(), floor.getY()] = BlockType.Floor;
             }
-            foreach (Position floor in hallway.getWallPositions())
+            foreach (Position wall in hallway.getWallPositions())
             {
-                this.map[floor.getX(), floor.getY()] = BlockType.Wall;
+                this.map[wall.getX(), wall.getY()] = BlockType.Wall;
             }
         }
 

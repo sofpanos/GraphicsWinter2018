@@ -19,8 +19,8 @@ namespace Core.Utility
 
         public Rectangle(Section section)
         {
-            this.x = section.getXOff();
-            this.y = section.getYOff();
+            this.x = section.getX();
+            this.y = section.getY();
             this.width = section.getWidth();
             this.height = section.getHeight();
         }
@@ -79,8 +79,8 @@ namespace Core.Utility
 
         public bool contains(Position pos)
         {
-            bool result = this.x <= pos.getX() && pos.getX() <= this.x + width - 1;
-            result &= this.y <= pos.getY() && pos.getY() <= this.y + height - 1;
+            bool result = this.x <= pos.getX() && pos.getX() < this.x + width;
+            result = result && this.y <= pos.getY() && pos.getY() < this.y + height;
             return result;
         }
 
