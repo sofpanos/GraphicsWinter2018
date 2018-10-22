@@ -5,30 +5,23 @@ namespace Core.Utility
     {
         private int x;
         private int y;
-        private bool iniatilized;
 
-        public Position(int x, int y)
+        public Position(int aX, int aY)
         {
-            this.x = x;
-            this.y = y;
-            this.iniatilized = true;
+            x = aX;
+            y = aY;
         }
 
-        public int getX()
+        public int getX() 
         {
             return x;
         }
 
-        public int getY()
+        public int getY() 
         {
             return y;
         }
-
-        public bool isInitialized()
-        {
-            return iniatilized;
-        }
-
+        
         public override bool Equals(object obj)
         {
             if(!(obj is Position))
@@ -41,7 +34,7 @@ namespace Core.Utility
 
         public override int GetHashCode()
         {
-            return this.x + this.y;
+            return x + y;
         }
 
         public bool Equals(Position other)
@@ -52,37 +45,36 @@ namespace Core.Utility
 
     public struct Section
     {
-        private int xOff;
-        private int yOff;
+        private int x;
+        private int y;
         private int width;
         private int height;
 
-        public Section(int x, int y, int width, int height)
+        public Section(int aX, int aY, int aWidth, int aHeight)
         {
-            xOff = x;
-            yOff = y;
-            this.width = width;
-            this.height = height;
+            x = aX;
+            y = aY;
+            width = aWidth;
+            height = aHeight;
         }
-
-        public int getXOff(){
-            return xOff;
-        }
-
-        public int getYOff()
+        
+        public int getX() 
         {
-            return yOff;
+            return x;
         }
-
+        public int getY()
+        {
+            return y;
+        }
         public int getWidth()
         {
             return width;
         }
-
         public int getHeight()
         {
             return height;
         }
+
 
         public void setWidth(int newWidth)
         {
@@ -110,7 +102,7 @@ namespace Core.Utility
 
         public bool isWalkable()
         {
-            return !(this.type == Wall || this.type == Floor);
+            return this.type != Wall && this.type != Floor;
         }
     }
 }
