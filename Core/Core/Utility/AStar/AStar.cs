@@ -8,7 +8,7 @@ namespace Core.Utility.AStar
     public class AStar
     {
         public const int VERTICAL_HORIZONTAL_SCORE = 5;
-        public const int DIAGONAL_SCORE = 25;
+        public const int DIAGONAL_SCORE = 100;
 
         public static List<Position> findPath(Position start, Position goal, WalkableTile[,] grid)
         {
@@ -97,8 +97,8 @@ namespace Core.Utility.AStar
                         continue;
                     else if (x == current.Position.getX() && y == current.Position.getY())
                         continue;
-                    
-                    neighbors.Add(gridNodes[x, y]);
+                    else if(x == current.Position.getX() || y == current.Position.getY())
+                        neighbors.Add(gridNodes[x, y]);
                 }
             }
             return neighbors;
