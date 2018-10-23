@@ -5,56 +5,54 @@ namespace Core.Utility.AStar
 {
     public class Node
     {
-        private Position nodePosition;
-        private Position goal;
-        private Node previousNode;
-        private bool start;
-        private bool validPathNode;
-        private int gScore;
-        private int hScore;
-
-        public Node(Position pos, Position goal, bool validPath)
+        public static Position start;
+        public static Position goal;
+        
+        public Node(Position pos, bool validPath)
         {
-            this.nodePosition = pos;
-            this.goal = goal;
-            this.validPathNode = validPath;
-            this.start = false;
-            this.gScore = int.MaxValue;
+            this.Position = pos;
+            this.Start = Node.start.Equals(this.Position);
+            this.Goal = Node.goal.Equals(this.Position);
+            if (this.Start || this.Goal){
+                this.Valid = true;
+                if (this.Start)
+                {
+                    this.GScore = 0;
+                }
+            }   
+            else
+                this.Valid = validPath;
+            if(!this.Start)
+                this.GScore = int.MaxValue;
+            
+            calculateHScore();
         }
 
-        public Node(Position pos, Position goal, bool validPath, bool start)
+        public bool Start
         {
-            this.nodePosition = pos;
-            this.goal = goal;
-            this.validPathNode = validPath;
-            this.start = start;
-            this.gScore = 0;
-            this.hScore = 0;
+            get;
+            private set;
         }
 
-        public Node getPreviousNode()
-        {
-            return this.previousNode;
+        public bool Goal 
+        { 
+            get; private set; 
         }
 
-        public Position getPosition()
-        {
-            return this.nodePosition;
-        }
+        public bool Valid { get; private set; }
 
-        public void setValidPathNode(bool value)
-        {
-            this.validPathNode = value;
-        }
+        public Position Position { get; set; }
+
+        public Node PreviousNode { get; set; }
+
+        public int HScore { get; private set; }
+
+        public int GScore { get; set; }
+        
 
         public int getFScore()
         {
-            return this.gScore + this.hScore;
-        }
-
-        public int getPathLengthToStart()
-        {
-            return findPathLengthRecurs();
+            return this.GScore + this.HScore;
         }
 
         public List<Position> getPathToStart()
@@ -62,14 +60,11 @@ namespace Core.Utility.AStar
             return getPathToStartRecurs(this);
         }
 
-        public bool isValidPathNode()
-        {
-            return this.validPathNode;
-        }
+        
 
-        public int nextNodeCost(Position nextPos)
+        public int distanceCost(Position pos)
         {
-            if (this.nodePosition.getX() == nextPos.getX() || this.nodePosition.getY() == nextPos.getY())
+            if (this.Position.getX() == pos.getX() || this.Position.getY() == pos.getY())
             {
                 return AStar.VERTICAL_HORIZONTAL_SCORE;
             }
@@ -79,57 +74,17 @@ namespace Core.Utility.AStar
             }
         }
 
-        public bool update(Node previous)
+        public int calculateNewGScore(Node newPrevious)
         {
-            if (calculateGScore(previous))
-            {
-                calculateHScore();
-                return true;
-            }
-            return false;
-        }
-
-        private bool calculateGScore(Node previous)
-        {
-            if (previous == null)
-            {
-                gScore = int.MaxValue;
-                return true;
-            }
-
-            if (this.previousNode == null && !this.start)
-            {
-                this.previousNode = previous;
-                this.gScore = recursCalcGScore(previous);
-                return true;
-            }
-
-            int newGScore = nextNodeCost(previous.nodePosition) + recursCalcGScore(previous);
-            if (newGScore <= this.gScore)
-            {
-                this.previousNode = previous;
-                this.gScore = newGScore;
-                return true;
-            }
-            return false;
+            return distanceCost(newPrevious.Position) + newPrevious.GScore;
         }
 
         private void calculateHScore()
         {
-            int dX = Math.Abs(this.nodePosition.getX() - this.goal.getX());
-            int dY = Math.Abs(this.nodePosition.getY() - this.goal.getY());
-            this.hScore = AStar.DIAGONAL_SCORE * Math.Min(dX, dY) + AStar.VERTICAL_HORIZONTAL_SCORE *
+            int dX = Math.Abs(this.Position.getX() - Node.goal.getX());
+            int dY = Math.Abs(this.Position.getY() - Node.goal.getY());
+            this.HScore = AStar.DIAGONAL_SCORE * Math.Min(dX, dY) + AStar.VERTICAL_HORIZONTAL_SCORE *
                 (Math.Max(dX, dY) - Math.Min(dX, dY));
-        }
-
-        private int findPathLengthRecurs()
-        {
-            if (this.start)
-            {
-                return 0;
-            }
-
-            return this.previousNode.findPathLengthRecurs() + 1;
         }
 
         public bool Equals(Node other)
@@ -138,33 +93,47 @@ namespace Core.Utility.AStar
             {
                 return false;
             }
-            if (this.nodePosition.Equals(other.nodePosition))
+            if (this.Position.Equals(other.Position))
             {
                 return true;
             }
             return false;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return false;
+            if(obj is Node)
+                return Equals((Node)obj);
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Position.GetHashCode();
+        }
+
         private static int recursCalcGScore(Node theNode)
         {
-            if (theNode.start)
+            if (theNode.Start)
             {
                 return 0;
             }
 
-            return theNode.nextNodeCost(theNode.previousNode.nodePosition) + recursCalcGScore(theNode.previousNode);
+            return theNode.distanceCost(theNode.PreviousNode.Position) + recursCalcGScore(theNode.PreviousNode);
         }
 
         private static List<Position> getPathToStartRecurs(Node node)
         {
             List<Position> thePath = new List<Position>();
-            thePath.Add(node.nodePosition);
-            if (node.start)
+            thePath.Add(node.Position);
+            if (node.Start)
             {
                 return thePath;
             }
 
-            List<Position> previousItems = getPathToStartRecurs(node.previousNode);
+            List<Position> previousItems = getPathToStartRecurs(node.PreviousNode);
             thePath.AddRange(previousItems);
             return thePath;
         }

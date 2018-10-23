@@ -17,6 +17,7 @@ namespace Core.Constructions
         private Position? entrance;
         private Position? exit;
         private bool hasLight = false;
+        private string ID;
 
         public Room(int xOff, int yOff, int width, int height)
         {
@@ -29,6 +30,14 @@ namespace Core.Constructions
             this.type = type;
         }
 
+        public string getID()
+        {
+            return ID;
+        }
+
+        public void setID(string id){
+            ID = id;
+        }
         public Section getRoomContainer(){
             return roomContainer;
         }

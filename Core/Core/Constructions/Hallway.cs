@@ -15,6 +15,7 @@ namespace Core.Constructions
 
         public Hallway(string id, List<Position> path, List<Position> wall)
         {
+            this.id = id;
             this.floorPositions = path;
             this.wallPositions = wall;
         }
@@ -24,7 +25,7 @@ namespace Core.Constructions
             return floorPositions;
         }
 
-        public List<Position> getWallPosition()
+        public List<Position> getWallPositions()
         {
             return wallPositions;
         }
