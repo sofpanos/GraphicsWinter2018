@@ -42,7 +42,7 @@ namespace Core.Constructions
             return roomContainer;
         }
 
-        public void setFloorPositions(List<Position> positions)
+        internal void setFloorPositions(List<Position> positions)
         {
             this.floorPositions = positions;
         }
@@ -52,7 +52,7 @@ namespace Core.Constructions
             return floorPositions;
         }
 
-        public void setWallPositions(List<Position> positions)
+        internal void setWallPositions(List<Position> positions)
         {
             foreach (Position wallPosition in positions)
             {
@@ -67,15 +67,17 @@ namespace Core.Constructions
             return new List<Position>(temp);
         }
 
-        public void setEntrance(Position entrance)
+        internal void setEntrance(Position entrance)
         {
+            //Αν υπάρχει είσοδος επανέφερε τη θέση.
             if (this.entrance != null)
             {
-                wallBlocks.Remove((Position)entrance);
-                wallBlocks.Add((Position)this.entrance, BlockType.Wall);
-                floorPositions.Add(entrance);
                 floorPositions.Remove((Position)this.entrance);
+                wallBlocks.Add((Position)this.entrance, BlockType.Wall);
             }
+
+            floorPositions.Add(entrance);
+            wallBlocks.Remove(entrance);
             this.entrance = entrance;
         }
 
@@ -84,20 +86,16 @@ namespace Core.Constructions
             return this.entrance;
         }
 
-        public void setExit(Position exit)
+        internal void setExit(Position exit)
         {
+            //Αν υπάρχει έξοδος επανέφερε τη θέση.
             if (this.exit != null)
             {
-                wallBlocks.Remove(exit);
-                wallBlocks.Add((Position)this.exit, BlockType.Wall);
                 floorPositions.Remove((Position)this.exit);
-                floorPositions.Add(exit);
+                wallBlocks.Add((Position)this.exit, BlockType.Wall);
             }
-            else
-            {
-                wallBlocks.Remove(exit);
-                floorPositions.Add(exit);
-            }
+            floorPositions.Add(exit);
+            wallBlocks.Remove(exit);
             this.exit = exit;
         }
 
@@ -139,7 +137,7 @@ namespace Core.Constructions
                     wallPosition = new Position(wallPosition.getX(), wallPosition.getY() + 1);
                 else if (wallBlocks.ContainsKey(new Position(wallPosition.getX(), wallPosition.getY() - 1)))
                     wallPosition = new Position(wallPosition.getX(), wallPosition.getY() - 1);
-                else 
+                else //Na prosthesw na proxoraei sto toixo an briskei eisodo i exodo.
                     break;
                 if (validLightPositions.Contains(wallPosition))
                     break;
