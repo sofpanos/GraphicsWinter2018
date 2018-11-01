@@ -4,6 +4,8 @@ using UnityEngine;
 using Core;
 using Core.Factories;
 using Core.Utility;
+using System;
+using UnityEngine.UI;
 using Core.Constructions;
 
 public class Initializer : MonoBehaviour {
@@ -14,6 +16,8 @@ public class Initializer : MonoBehaviour {
     public int level;
     public int width;
     public int height;
+	public DateTime startTime;
+
 	// Use this for initialization
 	void Start () {
 /*
@@ -119,10 +123,13 @@ public class Initializer : MonoBehaviour {
                 hallFloor.transform.SetParent(hallObject.transform);
             }
         }*/
+		startTime = DateTime.Now;
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		TimeSpan timeEllapsed = DateTime.Now - startTime;
+		GameObject.Find("Time").GetComponent<Text>().text = "Time: " + timeEllapsed.Hours + ":" + timeEllapsed.Minutes + ":" + timeEllapsed.Seconds;
 	}
 }
