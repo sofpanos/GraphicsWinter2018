@@ -12,8 +12,8 @@ namespace Core.Constructions
 
         private Section roomContainer;
         private string type;
-        private List<Position> floorPositions;
-        private Dictionary<Position, BlockType> wallBlocks;
+        private List<Position> floorPositions = new List<Position>();
+        private Dictionary<Position, BlockType> wallBlocks = new Dictionary<Position,BlockType>();
         private Position? entrance;
         private Position? exit;
         private string ID;
@@ -167,6 +167,11 @@ namespace Core.Constructions
                 || floorPositions.Contains(new Position(wallPosition.getX(), wallPosition.getY() - 1)))
                 return true;
             return false;
+        }
+
+        public Dictionary<Position, BlockType> getWallBlocks()
+        {
+            return wallBlocks;
         }
     }
 
