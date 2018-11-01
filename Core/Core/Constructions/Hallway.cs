@@ -69,8 +69,7 @@ namespace Core.Constructions
             } 
             this.intersection = intersection;
             this.floorPositions.Add((Position)this.intersection);
-            this.wallPositions.Add((Position)this.intersection);
-
+            this.wallPositions.Remove((Position)this.intersection);
         }
     }
 }
