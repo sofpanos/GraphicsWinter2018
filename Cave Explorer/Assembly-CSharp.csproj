@@ -50,11 +50,7 @@
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
-<<<<<<< HEAD
-    <UnityVersion>2018.2.13f1</UnityVersion>
-=======
     <UnityVersion>2018.2.14f1</UnityVersion>
->>>>>>> refs/heads/local
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -65,7 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Sources\Initializer.cs" />
+    <Compile Include="Assets\Project\Game\Scripts\Initializer.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Users/Konstantinos/Documents/GitHub/GraphicsWinter2018/Cave Explorer/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -276,14 +272,14 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="Core">
-      <HintPath>E:/Users/Konstantinos/Documents/GitHub/GraphicsWinter2018/Cave Explorer/Assets/Prefabs/Core.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Konstantinos/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Konstantinos/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Core">
+      <HintPath>E:/Users/Konstantinos/Documents/GitHub/GraphicsWinter2018/Cave Explorer/Assets/Project/Game/Scripts/Core.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
