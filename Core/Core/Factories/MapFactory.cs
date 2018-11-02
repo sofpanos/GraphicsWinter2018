@@ -23,10 +23,10 @@ namespace Core.Factories
             
             createRoomsAndHallways(sections, theMap, random);
 
-            createLightsAndSwitches(theMap, random, level, 0.8);
-
             createExitSwitch(theMap, random);
 
+            createLightsAndSwitches(theMap, random, level, 0.8);
+ 
             return theMap;
         }
 
@@ -39,9 +39,9 @@ namespace Core.Factories
 
             createRoomsAndHallways(sections, theMap, random);
 
-            //createLightsAndSwitches(theMap, random, level, 0.8);
+            createExitSwitch(theMap, random);
 
-            //createExitSwitch(theMap, random);
+            createLightsAndSwitches(theMap, random, level, 0.8);
 
             return new GameMap(width, height);
         }

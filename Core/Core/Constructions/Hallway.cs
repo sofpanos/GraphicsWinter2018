@@ -9,7 +9,7 @@ namespace Core.Constructions
         public const int MIN_SIZE = 3;
 
         private List<Position> floorPositions;
-        private List<Position> wallPositions;
+        private List<Position> wallPositions = new List<Position>();
         private Position? intersection;
         private string id = "";
 
@@ -17,7 +17,7 @@ namespace Core.Constructions
         {
             this.id = id;
             this.floorPositions = path;
-            this.wallPositions = wall;
+            setWallPosition(wall);
         }
 
         public List<Position> getPath()
@@ -37,7 +37,14 @@ namespace Core.Constructions
 
         public void setWallPosition(List<Position> wallPositions)
         {
-            this.wallPositions = wallPositions;
+            foreach (Position pos in wallPositions)
+            {
+                if (this.floorPositions.Contains(pos))
+                {
+                    continue;
+                }
+                this.wallPositions.Add(pos);
+            }
         }
 
         public string getID()
@@ -69,8 +76,7 @@ namespace Core.Constructions
             } 
             this.intersection = intersection;
             this.floorPositions.Add((Position)this.intersection);
-            this.wallPositions.Add((Position)this.intersection);
-
+            this.wallPositions.Remove((Position)this.intersection);
         }
     }
 }

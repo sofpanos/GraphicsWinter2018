@@ -13,6 +13,7 @@ namespace Core.Utility
         Light, 
         Switch, 
         ExitSwitch,
-        Exit
+        Exit,
+        HallwayDoor
     }
 }

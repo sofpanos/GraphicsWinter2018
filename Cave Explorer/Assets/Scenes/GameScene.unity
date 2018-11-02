@@ -293,6 +293,21 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 114790324227641304, guid: 3223fb1732cf2594eadea9a1013f6820,
+        type: 2}
+      propertyPath: m_MouseLook.clampVerticalRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20994210046851342, guid: 3223fb1732cf2594eadea9a1013f6820,
+        type: 2}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 20994210046851342, guid: 3223fb1732cf2594eadea9a1013f6820,
+        type: 2}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3223fb1732cf2594eadea9a1013f6820, type: 2}
   m_IsPrefabAsset: 0

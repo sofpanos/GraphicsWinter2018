@@ -135,6 +135,10 @@ namespace Core.Factories
                 {
                     switchFloorWallTile(map, (Position)previousHall.getIntersection());
                 }
+                else if (previousRoom.getExit() != null)
+                {
+                    switchFloorWallTile(map, (Position)previousRoom.getExit());
+                }
                 previousHall.setIntersection(entrance);
             }
             switchFloorWallTile(map, entrance);
