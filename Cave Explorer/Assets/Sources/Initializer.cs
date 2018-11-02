@@ -103,6 +103,14 @@ public class Initializer : MonoBehaviour {
 				roomWall.name = room.getID() + "_Wall_" + wallPosition.getX() + "_" + wallPosition.getY();
                 roomWall.transform.position = wallTransPos;
                 roomWall.transform.SetParent(wallParent.transform);
+				if(UnityEngine.Random.Range(0, 100) < 30)
+				{
+					roomWall.transform.Rotate(Vector3.up, 90f); 
+				}
+				else if(UnityEngine.Random.Range(0, 100) < 60)
+				{
+					roomWall.transform.Rotate(Vector3.up, -90f);
+				}
             }
 
 			GameObject floorParent = new GameObject();
