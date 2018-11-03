@@ -1,0 +1,11 @@
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\bin\Debug\Core.dll
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\bin\Debug\Core.pdb
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+E:\Users\Konstantinos\Documents\GitHub\GraphicsWinter2018\Core\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
