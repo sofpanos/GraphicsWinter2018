@@ -46,7 +46,7 @@ public class Initializer : MonoBehaviour {
 				newPlayer.transform.position = new Vector3(playerPosition.getX() * 2, 2, playerPosition.getY() * 2);
 				newPlayer.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
 				*/
-				map = MapFactory.getNewGameMap(300, 80, 1);
+				map = MapFactory.getNewGameMap(width, height, 1);
 				bool first = true;
 				/*
 				for(int x = 0; x < map.getWidth();x ++)
@@ -87,7 +87,8 @@ public class Initializer : MonoBehaviour {
 			if (first)
             {
                 Position playerPosition = room.getFloorPositions()[UnityEngine.Random.Range(0, room.getFloorPositions().Count)];
-                GameObject newPlayer =GameObject.Find("Player");
+				GameObject newPlayer = (GameObject)Instantiate(player);
+				newPlayer.name = "Player";
                 newPlayer.transform.position = new Vector3(playerPosition.getX() * 2, 2, playerPosition.getY() * 2);
                 newPlayer.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
 				first = false;
@@ -156,7 +157,7 @@ public class Initializer : MonoBehaviour {
                 Vector3 floorTransPos = new Vector3(floorPosition.getX() * 2, 0, floorPosition.getY() * 2);
 				hallFloor.name = hall.getID() + "_Floor_" + floorPosition.getX() + "_" + floorPosition.getY();
                 hallFloor.transform.position = floorTransPos;
-                hallFloor.transform.SetParent(hallObject.transform);
+                hallFloor.transform.SetParent(floorObject.transform);
             }
         }//*/
 		startTime = DateTime.Now;

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23966998204858454}
   - component: {fileID: 64007278431346186}
   m_Layer: 0
-  m_Name: RockWallPrefab1
+  m_Name: RockWal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
