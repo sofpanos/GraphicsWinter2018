@@ -7,6 +7,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	public float speed = 10f;
 	public float step = 0.5f;
 	Vector3 previousPosition;
+	private bool cursorLocked;
 	// Use this for initialization
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
@@ -16,7 +17,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		cursorLocked = true;
 		
 	}
 	private void FixedUpdate()
@@ -36,9 +37,31 @@ public class CharacterControllerScript : MonoBehaviour {
 				audio.Play();
 			previousPosition = transform.position;
 		}
-		if (Input.GetKeyDown(KeyCode.Escape))
+		InternalLockUpdate();
+		
+	}
+
+	private void InternalLockUpdate()
+	{
+		
+		if (Input.GetKeyUp(KeyCode.Escape))
+		{
+			cursorLocked = false;
+		}
+		else if (Input.GetMouseButtonUp(0))
+		{
+			cursorLocked = true;
+		}
+		if (!cursorLocked)
 		{
 			Cursor.lockState = CursorLockMode.None;
+			
+		}
+		else
+		{
+			Cursor.lockState = CursorLockMode.Locked;
+			
 		}
 	}
+
 }
