@@ -10,6 +10,7 @@ using Core.Constructions;
 
 public class Initializer : MonoBehaviour {
     public GameMap map;
+	public GameObject roof;
     public GameObject wall;
     public GameObject floor;
     public GameObject player;
@@ -98,6 +99,10 @@ public class Initializer : MonoBehaviour {
 			wallParent.name = room.getID() + "_Wall";
 			wallParent.transform.SetParent(roomObject.transform);
 
+			GameObject roofParent = new GameObject();
+			roofParent.name = room.getID() + "_Roof";
+			roofParent.transform.SetParent(roomObject.transform);
+
 			foreach (Position wallPosition in room.getWallPositions()){
                 GameObject roomWall = (GameObject)Instantiate(wall);
                 Vector3 wallTransPos = new Vector3(wallPosition.getX() * 2, 2, wallPosition.getY() * 2);
@@ -112,6 +117,11 @@ public class Initializer : MonoBehaviour {
 				{
 					roomWall.transform.Rotate(Vector3.up, -90f);
 				}
+				//Create Roof over wall, avoiding light through the edges
+				GameObject roofObj = (GameObject)Instantiate(roof);
+				roofObj.name = roomObject.name + "_Roof_" + wallPosition.getX() + "_" + wallPosition.getY();
+				roofObj.transform.position = new Vector3(wallPosition.getX() * 2, 4, wallPosition.getY() * 2);
+				roofObj.transform.SetParent(roofParent.transform);
             }
 
 			GameObject floorParent = new GameObject();
@@ -125,7 +135,13 @@ public class Initializer : MonoBehaviour {
 				roomFloor.name = room.getID() + "_Floor_" + floorPosition.getX() + "_" + floorPosition.getY();
                 roomFloor.transform.position = floorTransPos;
                 roomFloor.transform.SetParent(floorParent.transform);
-            }
+
+				//Create Roof
+				GameObject roofObj = (GameObject)Instantiate(roof);
+				roofObj.name = roomObject.name + "_Roof_" + floorPosition.getX() + "_" + floorPosition.getY();
+				roofObj.transform.position = new Vector3(floorPosition.getX() * 2, 4, floorPosition.getY() * 2);
+				roofObj.transform.SetParent(roofParent.transform);
+			}
         }
 
         foreach (Hallway hall in map.getHallways())
@@ -138,6 +154,11 @@ public class Initializer : MonoBehaviour {
 			wallObject.name = hall.getID() + "_Wall";
 			wallObject.transform.SetParent(hallObject.transform);
 
+			//Create Roof Parent
+			GameObject roofParent = new GameObject();
+			roofParent.name = hallObject.name + "_Roof";
+			roofParent.transform.SetParent(hallObject.transform);
+
             foreach (Position wallPosition in hall.getWallPositions())
             {
                 GameObject hallWall = (GameObject)Instantiate(wall);
@@ -145,7 +166,13 @@ public class Initializer : MonoBehaviour {
 				hallWall.name = hall.getID() + "_Wall_" + wallPosition.getX() + "_" + wallPosition.getY();
                 hallWall.transform.position = wallTransPos;
                 hallWall.transform.SetParent(wallObject.transform);
-            }
+				
+				//Create Roof over wall to avoid light passing through the edges
+				GameObject roofObj = (GameObject)Instantiate(roof);
+				roofObj.name = hallObject.name + "_Roof_" + wallPosition.getX() + "_" + wallPosition.getY();
+				roofObj.transform.position = new Vector3(wallPosition.getX() * 2, 4, wallPosition.getY() * 2);
+				roofObj.transform.SetParent(roofParent.transform);
+			}
 
 			GameObject floorObject = new GameObject();
 			floorObject.name = hallObject.name + "_Floor";
@@ -158,7 +185,13 @@ public class Initializer : MonoBehaviour {
 				hallFloor.name = hall.getID() + "_Floor_" + floorPosition.getX() + "_" + floorPosition.getY();
                 hallFloor.transform.position = floorTransPos;
                 hallFloor.transform.SetParent(floorObject.transform);
-            }
+
+				//Create Roof
+				GameObject roofObj = (GameObject)Instantiate(roof);
+				roofObj.name = hallObject.name + "_Roof_" + floorPosition.getX() + "_" + floorPosition.getY();
+				roofObj.transform.position = new Vector3(floorPosition.getX() * 2, 4, floorPosition.getY() * 2);
+				roofObj.transform.SetParent(roofParent.transform);
+			}
         }//*/
 		startTime = DateTime.Now;
 		

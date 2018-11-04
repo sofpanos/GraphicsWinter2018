@@ -86,7 +86,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.06915272, g: 0.06915272, b: 0.3962264, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -287,8 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177b0a6f37d69644695963220291e8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 3
-  smoothing: 0.5
+  sensitivity: 4
+  smoothing: 1
 --- !u!114 &114917618770567788
 MonoBehaviour:
   m_ObjectHideFlags: 1

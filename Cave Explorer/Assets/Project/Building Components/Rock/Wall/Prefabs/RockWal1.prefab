@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4538119127408116}
   - component: {fileID: 33917151354983110}
   - component: {fileID: 23966998204858454}
-  - component: {fileID: 64007278431346186}
+  - component: {fileID: 65136353176018836}
   m_Layer: 0
   m_Name: RockWal1
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1205309149389422}
   m_Mesh: {fileID: 4300000, guid: 8cf37ab07fedda041a79dbf6f1816e34, type: 3}
---- !u!64 &64007278431346186
-MeshCollider:
+--- !u!65 &65136353176018836
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -93,8 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 8cf37ab07fedda041a79dbf6f1816e34, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.3472357, y: 3, z: 2.3440633}
+  m_Center: {x: 0.013133228, y: 0, z: -0.0010774732}
