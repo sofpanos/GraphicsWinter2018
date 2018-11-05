@@ -220,7 +220,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e2984348c2e1b6443b96ccc10e6b5b6b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4becdbf20cea62e4db091179ab5de15b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -356,6 +356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 4
   smoothing: 1
+  MinimumX: -90
+  MaximumX: 90
 --- !u!114 &114269895317079256
 MonoBehaviour:
   m_ObjectHideFlags: 1
