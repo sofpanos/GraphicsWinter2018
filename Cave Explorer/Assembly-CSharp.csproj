@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Project\Building Components\Generic\Door\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Project\Character\Scripts\CharacterControllerScript.cs" />
     <Compile Include="Assets\Project\Character\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Project\Game\Scripts\Initializer.cs" />

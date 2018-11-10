@@ -38,7 +38,30 @@ public class CharacterControllerScript : MonoBehaviour {
 			previousPosition = transform.position;
 		}
 		InternalLockUpdate();
-		
+		checkRayCast();
+	}
+
+	private void checkRayCast()
+	{
+		RaycastHit hit;
+		if(Physics.Raycast(this.transform.GetChild(0).position, this.transform.GetChild(0).forward, out hit, 2f))
+		{
+			if(hit.transform.tag == "Exit")
+			{
+				GameObject exit = GameObject.Find("Exit");
+				if (!exit.GetComponent<DoorScript>().Locked)
+				{
+					if (!exit.GetComponent<Animator>().GetBool("open") && Input.GetMouseButtonDown(0))
+					{
+						exit.GetComponent<Animator>().SetBool("open", true);
+					}
+					else if(Input.GetMouseButtonDown(0))
+					{
+						exit.GetComponent<Animator>().SetBool("closed", true);
+					}
+				}
+			}
+		}
 	}
 
 	private void InternalLockUpdate()

@@ -21,67 +21,11 @@ public class Initializer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		/*
-				for (int x = 0; x < 20; x++)
-				{
-					for (int y = 0; y < 20; y++)
-					{
-						if (x == 0 || x == 19 || y == 0 || y == 19)
-						{
-							GameObject roomWall = (GameObject)Instantiate(wall);
-							Vector3 wallTransPos = new Vector3(x * 2, 2, y * 2);
-							roomWall.transform.position = wallTransPos;
-							roomWall.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
-						}
-						else
-						{
-							GameObject roomFloor = (GameObject)Instantiate(floor);
-							Vector3 floorTransPos = new Vector3(x * 2, 0, y * 2);
-							roomFloor.transform.position = floorTransPos;
-							roomFloor.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
-						}
-					}
-				}
-				Position playerPosition = new Position(5,5);
-				GameObject newPlayer = (GameObject)Instantiate(player);
-				newPlayer.transform.position = new Vector3(playerPosition.getX() * 2, 2, playerPosition.getY() * 2);
-				newPlayer.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
-				*/
-				map = MapFactory.getNewGameMap(width, height, 1);
-				bool first = true;
-				/*
-				for(int x = 0; x < map.getWidth();x ++)
-				{
-					for(int y = 0; y < map.getHeight(); y++)
-					{
-						if (map[x, y] == BlockType.Floor || map[x, y] == BlockType.Light)
-						{
-							if (first)
-							{
-								Position playerPosition = new Position(x, y);
-								GameObject newPlayer = (GameObject)GameObject.Find("Player");
-								newPlayer.transform.position = new Vector3(playerPosition.getX() * 2, 2, playerPosition.getY() * 2);
-								newPlayer.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
-								first = false;
-							}
-							GameObject roomFloor = (GameObject)Instantiate(floor);
-							Vector3 floorTransPos = new Vector3(x * 2, 0, y * 2);
-							roomFloor.transform.position = floorTransPos;
-							roomFloor.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
-						}
-						else if (map[x, y] == BlockType.Wall || map[x,y] != BlockType.Nothing)
-						{
-							GameObject roomWall = (GameObject)Instantiate(wall);
-							Vector3 wallTransPos = new Vector3(x * 2, 2, y * 2);
-							roomWall.transform.position = wallTransPos;
-							roomWall.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
-						}
-
-					}
-				}*/
+		map = MapFactory.getNewGameMap(width, height, 1);
+		bool first = true;
 		foreach (Room room in map.getRooms())
-        {
-            GameObject roomObject = new GameObject();
+		{
+			GameObject roomObject = new GameObject();
             roomObject.transform.SetParent(((GameObject)GameObject.Find("Game")).transform);
 			roomObject.name = room.getID();
 
@@ -192,9 +136,21 @@ public class Initializer : MonoBehaviour {
 				roofObj.transform.position = new Vector3(floorPosition.getX() * 2, 4, floorPosition.getY() * 2);
 				roofObj.transform.SetParent(roofParent.transform);
 			}
-        }//*/
+        }
 		startTime = DateTime.Now;
 		
+	}
+	public void startNextLevel()
+	{
+		if (level == 3)
+		{
+			//calculate score and end game
+		}
+		else
+		{
+			level++;
+			Start();
+		}
 	}
 	
 	// Update is called once per frame
