@@ -49,15 +49,16 @@ public class CharacterControllerScript : MonoBehaviour {
 			if(hit.transform.tag == "Exit")
 			{
 				GameObject exit = GameObject.Find("Exit");
+				bool mouseButtonDown = Input.GetMouseButtonDown(0);
 				if (!exit.GetComponent<DoorScript>().Locked)
 				{
-					if (!exit.GetComponent<Animator>().GetBool("open") && Input.GetMouseButtonDown(0))
+					if (!exit.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("DoorOpen") && mouseButtonDown)
 					{
 						exit.GetComponent<Animator>().SetBool("open", true);
 					}
-					else if(Input.GetMouseButtonDown(0))
+					else if(mouseButtonDown && !exit.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("DoorIdle"))
 					{
-						exit.GetComponent<Animator>().SetBool("closed", true);
+						exit.GetComponent<Animator>().SetBool("close", true);
 					}
 				}
 			}
