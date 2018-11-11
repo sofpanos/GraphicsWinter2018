@@ -17,11 +17,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		cursorLocked = true;
-		
-	}
-	private void FixedUpdate()
-	{
+
 		float zAxis = Input.GetAxis("Vertical") * speed;
 		float xAxis = Input.GetAxis("Horizontal") * speed;
 		zAxis *= Time.deltaTime;
@@ -33,33 +29,35 @@ public class CharacterControllerScript : MonoBehaviour {
 		{
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.pitch = Mathf.Lerp(0.8f, 1f, Random.value);
-			if(!audio.isPlaying)
+			if (!audio.isPlaying)
 				audio.Play();
 			previousPosition = transform.position;
 		}
 		InternalLockUpdate();
 		checkRayCast();
+
+	}
+	private void FixedUpdate()
+	{
+		
 	}
 
 	private void checkRayCast()
 	{
 		RaycastHit hit;
-		if(Physics.Raycast(this.transform.GetChild(0).position, this.transform.GetChild(0).forward, out hit, 2f))
+		if (Input.GetMouseButtonDown(0))
 		{
-			if(hit.transform.tag == "Exit")
+			if (Physics.Raycast(this.transform.GetChild(0).position, this.transform.GetChild(0).forward, out hit, 2f))
 			{
-				GameObject exit = GameObject.Find("Exit");
-				bool mouseButtonDown = Input.GetMouseButtonDown(0);
-				if (!exit.GetComponent<DoorScript>().Locked)
+				if (hit.transform.tag == "Exit")
 				{
-					if (!exit.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("DoorOpen") && mouseButtonDown)
-					{
-						exit.GetComponent<Animator>().SetBool("open", true);
-					}
-					else if(mouseButtonDown && !exit.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("DoorIdle"))
-					{
-						exit.GetComponent<Animator>().SetBool("close", true);
-					}
+					GameObject exit = GameObject.Find("Exit");
+					exit.GetComponent<DoorScript>().openCloseDoor(transform.gameObject);
+				}
+				else if (hit.transform.tag == "ExitSwitch")
+				{
+					GameObject exitSwitch = GameObject.Find("ExitSwitch");
+					exitSwitch.GetComponent<ExitSwitchScript>().initiateSwitch(transform.gameObject);
 				}
 			}
 		}

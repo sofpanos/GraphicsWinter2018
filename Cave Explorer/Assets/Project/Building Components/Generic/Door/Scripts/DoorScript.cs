@@ -6,8 +6,9 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour {
 
 	private Animator animator;
-	public bool Locked = true;
-	public bool open = false;
+	public bool Locked = true;//θα γίνουν private
+	public bool open = false;//και αυτό, τα άφησα public για λόγους debugging να τα παρακολουθω από το inspector window
+	
 	// Use this for initialization
 	void Start () {
 		Locked = true;
@@ -36,5 +37,31 @@ public class DoorScript : MonoBehaviour {
 	void Update () {
 		
 		
+	}
+	public void openCloseDoor(GameObject initiator)
+	{
+		if(initiator.tag != "Player")
+		{
+			return;
+		}
+		
+		if (!Locked)
+		{
+			if (!open)
+			{
+				animator.SetBool("open", true);
+				open = true;
+			}
+			else
+			{
+				animator.SetBool("close", true);
+				open = false;
+			}
+		}
+	}
+
+	public void setLocked(bool value)
+	{
+		Locked = value;
 	}
 }

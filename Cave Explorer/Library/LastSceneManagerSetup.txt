@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Project/Scenes/SampleScene.unity
+- path: Assets/Project/Scenes/GameScene.unity
   isLoaded: 1
   isActive: 1
