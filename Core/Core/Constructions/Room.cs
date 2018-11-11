@@ -171,6 +171,11 @@ namespace Core.Constructions
         {
             return wallBlocks;
         }
+
+        internal bool setLightSwitch(Position pos)
+        {
+            throw new NotSupportedException();
+        }
     }
 
     

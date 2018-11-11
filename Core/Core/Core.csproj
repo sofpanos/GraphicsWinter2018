@@ -59,7 +59,7 @@
     <Compile Include="Utility\AStar\AStar.cs" />
     <Compile Include="Utility\AStar\Node.cs" />
     <Compile Include="Utility\BlockType.cs" />
-    <Compile Include="Utility\NodeEqualityComparer.cs" />
+    <Compile Include="Utility\AStar\NodeEqualityComparer.cs" />
     <Compile Include="Utility\Rectangle.cs" />
     <Compile Include="Utility\UtilityStructs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
