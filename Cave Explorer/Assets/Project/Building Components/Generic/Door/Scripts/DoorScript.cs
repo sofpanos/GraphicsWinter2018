@@ -6,14 +6,20 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour {
 
 	private Animator animator;
+	private AudioSource audioSource;
 	public bool Locked = true;//θα γίνουν private
 	public bool open = false;//και αυτό, τα άφησα public για λόγους debugging να τα παρακολουθω από το inspector window
-	
+
+	public AudioClip LockedSound;
+	public AudioClip OpenSound;
+	public AudioClip CloseSound;
+
 	// Use this for initialization
 	void Start () {
 		Locked = true;
 		open = false;
 		animator = GetComponent<Animator>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -22,22 +28,35 @@ public class DoorScript : MonoBehaviour {
 		{
 			if(!Locked && open)
 			{
+				/*
 				GameObject game = GameObject.Find("Game");
 				foreach(Transform child in game.transform)
 				{
 					Destroy(child.gameObject);
 				}
 				Initializer initializer = game.GetComponent<Initializer>();
-				initializer.startNextLevel();
+				initializer.startNextLevel();*/
 			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+		if (Locked)
+		{
+			audioSource.clip = LockedSound;
+		}
+		else if (open)
+		{
+			audioSource.clip = OpenSound;
+		}
+		else
+		{
+			audioSource.clip = CloseSound;
+		}
 		
 	}
+
 	public void openCloseDoor(GameObject initiator)
 	{
 		if(initiator.tag != "Player")
@@ -57,6 +76,10 @@ public class DoorScript : MonoBehaviour {
 				animator.SetBool("close", true);
 				open = false;
 			}
+		}
+		else
+		{
+			audioSource.Play();
 		}
 	}
 

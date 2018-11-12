@@ -22,13 +22,15 @@ public class ExitSwitchScript : MonoBehaviour {
 		{
 			if (!activated)
 			{
-				GameObject.Find("Exit").GetComponent<DoorScript>().setLocked(false);
+				GameObject.Find("Exit").GetComponentInChildren<DoorScript>().setLocked(false);
 				animator.SetBool("activate", true);
+				activated = true;
 			}
 			else
 			{
-				GameObject.Find("Exit").GetComponent<DoorScript>().setLocked(true);
+				GameObject.Find("Exit").GetComponentInChildren<DoorScript>().setLocked(true);
 				animator.SetBool("deactivate", true);
+				activated = false;
 			}
 		}
 	}
