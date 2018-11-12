@@ -11,7 +11,8 @@ namespace Core
         private Dictionary<string, Hallway> hallways;
         private Dictionary<string, Position> entrances;
         private Dictionary<string, Position> exits;
-        private BlockType[,] map;
+        private int width;
+        private int height;
 
         public GameMap(int width, int height)
         {
@@ -19,46 +20,18 @@ namespace Core
             this.hallways = new Dictionary<string, Hallway>();
             this.entrances = new Dictionary<string, Position>();
             this.exits = new Dictionary<string, Position>();
-            this.map = new BlockType[width, height];
-            initializeMap();
-        }
-
-        private void initializeMap()
-        {
-            for (int x = 0; x <= map.GetUpperBound(0); x++)
-            {
-                for (int y = 0; y <= map.GetUpperBound(1); y++)
-                {
-                    this[x, y] = BlockType.Nothing;
-                }
-            }
+            this.width = width;
+            this.height = height;
         }
 
         public void addRoom(string ID, Room room)
         {
             rooms.Add(ID, room);
-            foreach (Position wall in room.getWallPositions())
-            {
-                map[wall.getX(), wall.getY()] = BlockType.Wall;
-            }
-            foreach (Position floor in room.getFloorPositions())
-            {
-                map[floor.getX(), floor.getY()] = BlockType.Floor;
-            }
         }
 
         public void addHallway(string ID, Hallway hallway)
         {
             hallways.Add(ID, hallway);
-            //Ενημέρωση του 2D Πίνακα
-            foreach (Position floor in hallway.getPath())
-            {
-                this.map[floor.getX(), floor.getY()] = BlockType.Floor;
-            }
-            foreach (Position wall in hallway.getWallPositions())
-            {
-                this.map[wall.getX(), wall.getY()] = BlockType.Wall;
-            }
         }
 
         public void addEntrance(string ID, Position entrance)
@@ -102,21 +75,15 @@ namespace Core
             }
             return hallList;
         }
-
-        public BlockType this[int x, int y]
-        {
-            get { return map[x, y]; }
-            set { map[x, y] = value; }
-        }
-
+ 
         public int getWidth()
         {
-            return map.GetUpperBound(0) + 1;
+            return this.width;
         }
 
         public int getHeight()
         {
-            return map.GetUpperBound(1) + 1;
+            return this.height;
         }
     }
 }

@@ -11,19 +11,25 @@ namespace Core.Factories
         private const int MIN_SLICE_SIZE = 30;
         private const string ROOM_ID_FORMAT_STRING = "R{0,3:D3}";
         private const string HALLWAY_ID_FORMAT_STRING = "H{0,3:D3}";
-        private const int START_ID_NUM = 1;
+        private const int START_ID_NUM = 1; 
+        internal static List<Position> wallPositions;
+        internal static List<Position> floorPositions;
+        
         
         
         public static GameMap getNewGameMap(int width, int height, int level)
         {
             GameMap theMap = new GameMap(width, height);
+
+            MapFactory.wallPositions = new List<Position>();
+            MapFactory.floorPositions = new List<Position>();
             
             Random random = new Random();
             List<Section> sections = createSections(width, height, random);
             
             createRoomsAndHallways(sections, theMap, random);
 
-            createExitSwitch(theMap, random);
+            createLevelExitAndSwitch(theMap, random);
 
             createLightsAndSwitches(theMap, random, level, 0.8);
  
@@ -33,27 +39,28 @@ namespace Core.Factories
         public static GameMap getNewGameMap(int width, int height,int level, int seed)
         {
             GameMap theMap = new GameMap(width, height);
-            
+
+            MapFactory.wallPositions = new List<Position>();
+            MapFactory.floorPositions = new List<Position>();
+
             Random random = new Random(seed);
             List<Section> sections = createSections(width, height, random);
 
             createRoomsAndHallways(sections, theMap, random);
 
-            createExitSwitch(theMap, random);
+            createLevelExitAndSwitch(theMap, random);
 
             createLightsAndSwitches(theMap, random, level, 0.8);
 
             return new GameMap(width, height);
         }
 
-        public static void createExitSwitch(GameMap theMap, Random random)
+        public static void createLevelExitAndSwitch(GameMap theMap, Random random)
         {
-            Room room = theMap.getRooms()[random.Next(theMap.getRooms().Count)];
-            Position exit = room.getWallPositions()[random.Next(room.getWallPositions().Count)];
-            room = theMap.getRooms()[random.Next(theMap.getRooms().Count)];
-            Position exitSwitch = room.getWallPositions()[random.Next(room.getWallPositions().Count)];
-            theMap[exit.getX(), exit.getY()] = BlockType.Exit;
-            theMap[exitSwitch.getX(), exitSwitch.getY()] = BlockType.ExitSwitch;
+            //Create Level Exit
+            theMap.getRooms()[random.Next(theMap.getRooms().Count)].setWorldExit(random);
+            //Create Level Exit Switch
+            theMap.getRooms()[random.Next(theMap.getRooms().Count)].setWorldExitSwitch(random);
         }
 
         public static List<Section> createSections(int width, int height, Random random)
@@ -132,7 +139,7 @@ namespace Core.Factories
 
             foreach (Section current in sections)
             {
-                map.addRoom(String.Format(ROOM_ID_FORMAT_STRING, id), RoomFactory.getRoom(current,String.Format(ROOM_ID_FORMAT_STRING, id++), random));
+                map.addRoom(String.Format(ROOM_ID_FORMAT_STRING, id), RoomFactory.getRoom(current,String.Format(ROOM_ID_FORMAT_STRING, id++), random, MapFactory.wallPositions, MapFactory.floorPositions));
             }
             
             id = START_ID_NUM;
@@ -144,7 +151,7 @@ namespace Core.Factories
                     previousRoom = currentRoom;
                     continue;
                 }
-                previousHall = currentHall = HallwayFactory.getHallway(String.Format(HALLWAY_ID_FORMAT_STRING, id++), previousRoom, previousHall, currentRoom, map, random);
+                previousHall = currentHall = HallwayFactory.getHallway(String.Format(HALLWAY_ID_FORMAT_STRING, id++), previousRoom, previousHall, currentRoom, map, random, MapFactory.wallPositions, MapFactory.floorPositions);
                 map.addHallway(currentHall.getID(), currentHall);
                 previousRoom = currentRoom;
             }
@@ -157,12 +164,11 @@ namespace Core.Factories
                 //80% Πιθανότητα / τα περασμένα επίπεδα ώστε να υπάρχει φως σε κάποιο δωμάτιο.
                 if (random.NextDouble() < propability / level)
                 {
-                    Position lightSwitch = room.getWallPositions()[random.Next(room.getWallPositions().Count)];
-                    map[lightSwitch.getX(), lightSwitch.getY()] = BlockType.Switch;
-                    Position light = room.getFloorPositions()[random.Next(room.getFloorPositions().Count)];
-                    map[light.getX(), light.getY()] = BlockType.Light;
+                    room.setLightSwitch(random);
                 }
             }
         }
+
+        
     }
 }

@@ -23,10 +23,7 @@ public class Initializer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		map = MapFactory.getNewGameMap(width, height, 1);
-
-		createRooms();
-		createHallways();
+		createLevel();
 
 		startTime = DateTime.Now;
 		
@@ -40,17 +37,26 @@ public class Initializer : MonoBehaviour {
 		else
 		{
 			level++;
-			Start();
+			//Clear Level
+			createLevel();
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		TimeSpan timeEllapsed = DateTime.Now - startTime;
-		GameObject.Find("Time").GetComponent<Text>().text = String.Format("Time: {0,2:D2}:{0,2:D2}:{0,2:D2}", timeEllapsed.Hours, timeEllapsed.Minutes, timeEllapsed.Seconds);
+		GameObject.Find("Time").GetComponent<Text>().text = String.Format("Time: {0:D2}:{1:D2}:{2:D2}", timeEllapsed.Hours, timeEllapsed.Minutes, timeEllapsed.Seconds);
 	}
 
-	private void createRooms()
+	private void createLevel()
+	{
+		map = MapFactory.getNewGameMap(width, height, level);
+		List<Position> wallPositions = new List<Position>();
+		createRooms(wallPositions);
+		createHallways(wallPositions);
+	}
+
+	private void createRooms(List<Position> wallPositions)
 	{
 		bool first = true;
 		foreach (Room room in map.getRooms())
@@ -77,7 +83,7 @@ public class Initializer : MonoBehaviour {
 			roofParent.name = room.getID() + "_Roof";
 			roofParent.transform.SetParent(roomObject.transform);
 
-			createWall(room.getWallBlocks(), room.getFloorPositions(), wallParent, roofParent);
+			createWall(room.getWallBlocks(), room.getFloorPositions(), wallParent, roofParent, wallPositions);
 
 			GameObject floorParent = new GameObject();
 			floorParent.name = room.getID() + "_Floor";
@@ -87,7 +93,7 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
-	private void createHallways()
+	private void createHallways(List<Position> worldWallPositions)
 	{
 		foreach (Hallway hall in map.getHallways())
 		{
@@ -104,7 +110,7 @@ public class Initializer : MonoBehaviour {
 			roofParent.name = hallObject.name + "_Roof";
 			roofParent.transform.SetParent(hallObject.transform);
 
-			createWall(hall.getWallPositions(), wallParent, roofParent);
+			createWall(hall.getWallPositions(), wallParent, roofParent, worldWallPositions);
 
 			GameObject floorParent = new GameObject();
 			floorParent.name = hallObject.name + "_Floor";
@@ -132,24 +138,27 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
-	private void createWall(Dictionary<Position, BlockType> wallBlocks, List<Position> floorPositions, GameObject wallParent, GameObject roofParent)
+	private void createWall(Dictionary<Position, BlockType> wallBlocks, List<Position> floorPositions, GameObject wallParent, GameObject roofParent, List<Position> worldWallPositions)
 	{
 		foreach (KeyValuePair<Position, BlockType> wallBlock in wallBlocks)
 		{
 
 			Vector3 wallTransPos = new Vector3(wallBlock.Key.getX() * 2, 2, wallBlock.Key.getY() * 2);
+			worldWallPositions.Add(wallBlock.Key);
 			switch (wallBlock.Value) {
 				case BlockType.Exit:
 					GameObject exitObject = (GameObject)Instantiate(exit);
 					exitObject.name = "Exit";
 					exitObject.transform.position = wallTransPos;
-					exitObject.transform.rotation = rotateToFloor(exitObject,wallBlock.Key, floorPositions);
+					rotateToFloor(exitObject,wallBlock.Key, floorPositions);
+					exitObject.transform.SetParent(wallParent.transform);
 					break;
 				case BlockType.ExitSwitch:
 					GameObject exitSwitchObj = (GameObject)Instantiate(exitSwitch);
 					exitSwitchObj.name = "ExitSwitch";
 					exitSwitchObj.transform.position = wallTransPos;
-					exitSwitchObj.transform.rotation = rotateToFloor(exitSwitchObj, wallBlock.Key, floorPositions);
+					rotateToFloor(exitSwitchObj, wallBlock.Key, floorPositions);
+					exitSwitchObj.transform.SetParent(wallParent.transform);
 					break;
 				default:
 					GameObject roomWall = (GameObject)Instantiate(wall);
@@ -176,10 +185,11 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
-	private void createWall(List<Position> wallPositions, GameObject wallParent, GameObject roofParent)
+	private void createWall(List<Position> wallPositions, GameObject wallParent, GameObject roofParent, List<Position> worldWallPositions)
 	{
 		foreach (Position wallPosition in wallPositions)
 		{
+			
 			GameObject hallWall = (GameObject)Instantiate(wall);
 			Vector3 wallTransPos = new Vector3(wallPosition.getX() * 2, 2, wallPosition.getY() * 2);
 			hallWall.name = wallParent.name + "_" + wallPosition.getX() + "_" + wallPosition.getY();
@@ -197,20 +207,29 @@ public class Initializer : MonoBehaviour {
 	/**
 	 * Rotates an Object towards the first found neighboring floor object
 	 */
-	private Quaternion rotateToFloor(GameObject obj,Position objPosition, List<Position> floor)
+	private void rotateToFloor(GameObject obj,Position objPosition, List<Position> floor)
 	{
 		foreach(Position neighbor in getNeighbors(objPosition))
 		{
 			if (floor.Contains(neighbor))
 			{
-				Transform objTransPos = obj.transform;
-				Vector3 neighboorTransPos = new Vector3(neighbor.getX(), 0, neighbor.getY());
-				Vector3 targetDir = neighboorTransPos - objTransPos.position;
-				Vector3 newDirection = Vector3.RotateTowards(obj.transform.forward, targetDir, 360f, 360f);
-				return Quaternion.LookRotation(newDirection);
+				if(neighbor.getX() == objPosition.getX() && neighbor.getY() == objPosition.getY() - 1)
+				{
+					obj.transform.Rotate(Vector3.up, 180f);
+				}
+				else if(neighbor.getY() == objPosition.getY())
+				{
+					if(neighbor.getX() == objPosition.getX() + 1)
+					{
+						obj.transform.Rotate(Vector3.up, 90f);
+					}
+					else if(neighbor.getX() == objPosition.getX() - 1)
+					{
+						obj.transform.Rotate(Vector3.up, -90f);
+					}
+				}
 			}
 		}
-		return new Quaternion();
 	}
 
 	/**

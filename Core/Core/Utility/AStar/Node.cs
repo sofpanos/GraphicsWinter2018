@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Core.Utility.AStar
 {
-    public class Node
+    internal class Node
     {
         public static Position start;
         public static Position goal;

@@ -5,18 +5,19 @@ using System.Collections.Generic;
 
 namespace Core.Factories
 {
-    public class RoomFactory
+    internal class RoomFactory
     {
         public RoomFactory()
         {
         }
 
-        public static Room getRoom(Section mapSection, string id, Random random)
+        public static Room getRoom(Section mapSection, string id, Random random, List<Position> wallPositions, List<Position> floorPosition)
         {
             int numberOfRects = random.Next(1, 8);
             Rectangle[] roomRectangles = createRoomRectangles(mapSection, numberOfRects, random);
             Room newRoom = getRoom(mapSection, roomRectangles, id);
-            
+            wallPositions.AddRange(newRoom.getWallPositions());
+            floorPosition.AddRange(newRoom.getFloorPositions());
             return newRoom;
         }
 

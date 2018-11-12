@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Core.Utility.AStar;
 
-namespace Core.Utility.Astar
+namespace Core.Utility.AStar
 {
-    public class NodeEqualityComparer : IEqualityComparer<Node>
+    internal class NodeEqualityComparer : IEqualityComparer<Node>
     {
         public bool Equals(Node node1, Node node2)
         {

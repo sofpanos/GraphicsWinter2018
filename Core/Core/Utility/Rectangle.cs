@@ -2,7 +2,7 @@
 
 namespace Core.Utility
 {
-    public class Rectangle
+    internal class Rectangle
     {
         private int x;
         private int y;

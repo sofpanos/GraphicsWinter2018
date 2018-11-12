@@ -10,8 +10,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	private bool cursorLocked;
 	// Use this for initialization
 	void Start () {
-		Cursor.lockState = CursorLockMode.Locked;
-		
+		this.cursorLocked = true;//For initial cursor lock
 		this.previousPosition = this.transform.position;
 	}
 	
@@ -52,12 +51,12 @@ public class CharacterControllerScript : MonoBehaviour {
 				if (hit.transform.tag == "Exit")
 				{
 					GameObject exit = GameObject.Find("Exit");
-					exit.GetComponent<DoorScript>().openCloseDoor(transform.gameObject);
+					exit.GetComponentInChildren<DoorScript>().openCloseDoor(transform.gameObject);
 				}
 				else if (hit.transform.tag == "ExitSwitch")
 				{
 					GameObject exitSwitch = GameObject.Find("ExitSwitch");
-					exitSwitch.GetComponent<ExitSwitchScript>().initiateSwitch(transform.gameObject);
+					exitSwitch.GetComponentInChildren<ExitSwitchScript>().initiateSwitch(transform.gameObject);
 				}
 			}
 		}
