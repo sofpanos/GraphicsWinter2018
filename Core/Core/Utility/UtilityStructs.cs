@@ -87,22 +87,5 @@ namespace Core.Utility
         }
     }
 
-    public struct WalkableTile
-    {
-        public const string Wall = "Wall";
-        public const string Floor = "Floor";
-        public const string Nothing = "Nothing";
-
-        private string type;
-
-        public WalkableTile(string type)
-        {
-            this.type = type;
-        }
-
-        public bool isWalkable()
-        {
-            return this.type != Wall && this.type != Floor;
-        }
-    }
+    
 }

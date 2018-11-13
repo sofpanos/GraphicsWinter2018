@@ -116,65 +116,95 @@ namespace Core.Constructions
         }
 
 
-        internal void setLights(Random random)
+        private void setLights(Random random, Dictionary<Position, BlockType> validBlocks)
         {
-            List<Position> validLightPositions = new List<Position>();
-            Position[] temp = new Position[wallBlocks.Count];
-            wallBlocks.Keys.CopyTo(temp,0);
-            Position wallPosition = temp[0];
-            for (int i = 0; i < wallBlocks.Count; i++)
+            List<Position> validKeys = new List<Position>(validBlocks.Keys);
+            int numberOfLights = validKeys.Count / 5;
+            numberOfLights = (numberOfLights == 0) ? 2 : numberOfLights;
+            
+            //Τα φώτα θα μπαίνουν σε τυχαίες θέσεις
+            //Θα μπορούσαμε να βάλουμε με σειρά πέρνοντας τις θέσεις από το πάτωμα που γειτονικά με τοίχο
+            //και αφού τα βάλουμε σε σειρά να αλλάζουμε το γειτονικό τοίχο κάθε "τόσα" σε φως.
+            for (int i = 0; i < numberOfLights; i++)
             {
-                if (isValidLightPosition(wallPosition))
-                {
-                    validLightPositions.Add(wallPosition);
-                }
-
-                if (wallBlocks.ContainsKey(new Position(wallPosition.getX() + 1, wallPosition.getY())))
-                    wallPosition = new Position(wallPosition.getX() + 1, wallPosition.getY());
-                else if (wallBlocks.ContainsKey(new Position(wallPosition.getX() - 1, wallPosition.getY())))
-                    wallPosition = new Position(wallPosition.getX() - 1, wallPosition.getY());
-                else if (wallBlocks.ContainsKey(new Position(wallPosition.getX(), wallPosition.getY() + 1)))
-                    wallPosition = new Position(wallPosition.getX(), wallPosition.getY() + 1);
-                else if (wallBlocks.ContainsKey(new Position(wallPosition.getX(), wallPosition.getY() - 1)))
-                    wallPosition = new Position(wallPosition.getX(), wallPosition.getY() - 1);
-                else //Na prosthesw na proxoraei sto toixo an briskei eisodo i exodo.
-                    break;
-                if (validLightPositions.Contains(wallPosition))
-                    break;
-            }
-
-            int lightSwitchIndex = random.Next(0, validLightPositions.Count);
-            Position lightSwitchPosition = validLightPositions[lightSwitchIndex];
-            for (int i = 0; i < validLightPositions.Count; i++)
-            {
-                if (i % 5 == 0 || i != lightSwitchIndex || wallBlocks[validLightPositions[i]] != BlockType.Exit 
-                     || wallBlocks[validLightPositions[i]] != BlockType.ExitSwitch)
-                {
-                    wallBlocks[validLightPositions[i]] =  BlockType.Light;
-                }
-
-
+                Position lightPos = validKeys[random.Next(0, validKeys.Count)];
+                validKeys.Remove(lightPos);
+                wallBlocks.Remove(lightPos);
+                wallBlocks.Add(lightPos, BlockType.Light);
             }
         }
 
-        private bool isValidLightPosition(Position wallPosition)
-        {
-            if(floorPositions.Contains(new Position(wallPosition.getX() + 1, wallPosition.getY())) 
-                || floorPositions.Contains(new Position(wallPosition.getX() - 1, wallPosition.getY()))
-                || floorPositions.Contains(new Position(wallPosition.getX(), wallPosition.getY() + 1))
-                || floorPositions.Contains(new Position(wallPosition.getX(), wallPosition.getY() - 1)))
-                return true;
-            return false;
-        }
+        
 
         public Dictionary<Position, BlockType> getWallBlocks()
         {
             return wallBlocks;
         }
 
-        internal bool setLightSwitch(Position pos)
+        // SPECIAL BLOCKS
+
+        internal void setLightSwitch(Random random)
         {
-            throw new NotSupportedException();
+            Dictionary<Position, BlockType> validBlocks = getValidSpecialWallblocks();
+            List<Position> keyList = new List<Position>(validBlocks.Keys);
+            Position lightSwitch = keyList[random.Next(0, keyList.Count)];
+            wallBlocks.Remove(lightSwitch);
+            wallBlocks.Add(lightSwitch, BlockType.Switch);
+            validBlocks.Remove(lightSwitch);
+            setLights(random, validBlocks);
+            HasLight = true;
+        }
+
+        internal Dictionary<Position, BlockType> getValidSpecialWallblocks()
+        {
+            Dictionary<Position, BlockType> valid = new Dictionary<Position, BlockType>();
+            foreach (KeyValuePair<Position, BlockType> wallBlock in wallBlocks)
+            {
+                if (isValidSpecialBlock(wallBlock.Key))
+                {
+                    valid.Add(wallBlock.Key, wallBlock.Value);
+                }
+            }
+            return valid;
+        }
+
+        private bool isValidSpecialBlock(Position pos)
+        {
+            if (wallBlocks[pos] != BlockType.Wall)
+            {
+                return false;
+            }
+            for (int x = pos.getX() - 1; x <= pos.getX() + 1; x++)
+            {
+                for (int y = pos.getY() - 1; y <= pos.getY() + 1; y++)
+                {
+                    if ((x == pos.getX() && y == pos.getY()) || (x != pos.getX() && y != pos.getY()))
+                    {
+                        continue;
+                    }
+                    if (floorPositions.Contains(new Position(x, y)))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        internal void setWorldExit(Random random)
+        {
+            List<Position> validBlockPositions = new List<Position>(getValidSpecialWallblocks().Keys);
+            Position exitPos = validBlockPositions[random.Next(0, validBlockPositions.Count)];
+            wallBlocks.Remove(exitPos);
+            wallBlocks.Add(exitPos, BlockType.Exit);
+        }
+
+        internal void setWorldExitSwitch(Random random)
+        {
+            List<Position> validBlockPositions = new List<Position>(getValidSpecialWallblocks().Keys);
+            Position exitSwitchPos = validBlockPositions[random.Next(0, validBlockPositions.Count)];
+            wallBlocks.Remove(exitSwitchPos);
+            wallBlocks.Add(exitSwitchPos, BlockType.ExitSwitch);
         }
     }
 

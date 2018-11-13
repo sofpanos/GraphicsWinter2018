@@ -1,19 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class DoorScript : MonoBehaviour {
 
 	private Animator animator;
-	public bool Locked = true;//θα γίνουν private
-	public bool open = false;//και αυτό, τα άφησα public για λόγους debugging να τα παρακολουθω από το inspector window
-	
+	private AudioSource audioSource;
+	private DateTime LockedTipTime;
+	private TimeSpan TipTime = new TimeSpan(0, 0, 5);
+	private bool Locked = true;
+	private bool open = false;
+	private bool toolTipShown = false;
+
+	public AudioClip LockedSound;
+	public AudioClip OpenCloseSound;
+
 	// Use this for initialization
 	void Start () {
 		Locked = true;
 		open = false;
 		animator = GetComponent<Animator>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -22,22 +32,39 @@ public class DoorScript : MonoBehaviour {
 		{
 			if(!Locked && open)
 			{
+				/*
 				GameObject game = GameObject.Find("Game");
 				foreach(Transform child in game.transform)
 				{
 					Destroy(child.gameObject);
 				}
 				Initializer initializer = game.GetComponent<Initializer>();
-				initializer.startNextLevel();
+				initializer.startNextLevel();*/
 			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+		if (Locked)
+		{
+			audioSource.clip = LockedSound;
+		}
+		else
+		{
+			audioSource.clip = OpenCloseSound;
+		}
+
+		if (LockedTipTime != null)
+		{
+			if((DateTime.Now - LockedTipTime) > TipTime)
+			{
+				GameObject.Find("HintTooltip").GetComponent<Text>().text = "";
+			}
+		}
 		
 	}
+
 	public void openCloseDoor(GameObject initiator)
 	{
 		if(initiator.tag != "Player")
@@ -58,10 +85,23 @@ public class DoorScript : MonoBehaviour {
 				open = false;
 			}
 		}
+		else
+		{
+			GameObject toolTip = (GameObject)GameObject.Find("HintToolTip");
+			toolTip.GetComponent<Text>().text = "Door Locked\nFind the Switch to unlock!";
+			LockedTipTime = DateTime.Now;
+			audioSource.Play();
+		}
 	}
 
 	public void setLocked(bool value)
 	{
 		Locked = value;
+	}
+
+	public void OnOpenCloseAnimation()
+	{
+		audioSource.clip = OpenCloseSound;
+		audioSource.Play();
 	}
 }

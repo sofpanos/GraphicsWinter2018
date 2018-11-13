@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ExitSwitchScript : MonoBehaviour {
 
-	bool activated = false;
-	Animator animator;
+	private bool activated = false;
+	private Animator animator;
+	private AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -22,14 +24,21 @@ public class ExitSwitchScript : MonoBehaviour {
 		{
 			if (!activated)
 			{
-				GameObject.Find("Exit").GetComponent<DoorScript>().setLocked(false);
+				GameObject.Find("Exit").GetComponentInChildren<DoorScript>().setLocked(false);
 				animator.SetBool("activate", true);
+				activated = true;
 			}
 			else
 			{
-				GameObject.Find("Exit").GetComponent<DoorScript>().setLocked(true);
+				GameObject.Find("Exit").GetComponentInChildren<DoorScript>().setLocked(true);
 				animator.SetBool("deactivate", true);
+				activated = false;
 			}
 		}
+	}
+
+	public void OnPlaySound()
+	{
+		audioSource.Play();
 	}
 }

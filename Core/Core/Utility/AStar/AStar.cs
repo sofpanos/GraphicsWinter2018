@@ -5,7 +5,7 @@ using Core.Utility;
 namespace Core.Utility.AStar
 {
 
-    public class AStar
+    internal class AStar
     {
         public const int VERTICAL_HORIZONTAL_SCORE = 5;
         public const int DIAGONAL_SCORE = 100;

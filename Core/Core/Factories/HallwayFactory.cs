@@ -6,13 +6,13 @@ using System.Collections.Generic;
 
 namespace Core.Factories
 {
-    public class HallwayFactory
+    internal class HallwayFactory
     {
         private const int MAX_ATEMPTS_FOR_EXIT = 2;
         private const int MIN_PASSAGE_X_OR_Y = 2;
         
         
-        public static Hallway getHallway(string id, Room previousRoom, Hallway previousHall, Room nextRoom, GameMap map, Random random)
+        public static Hallway getHallway(string id, Room previousRoom, Hallway previousHall, Room nextRoom, GameMap map, Random random, List<Position> wallPositions, List<Position> floorPositions)
         {
             int triesToCreateExit = 0;
             List<Position> path = new List<Position>();
@@ -27,24 +27,33 @@ namespace Core.Factories
                 path = AStar.findPath(entrance, exit, walkableMap);
             }
 
-            List<Position> wallPositions = createWallPositions(path, entrance, exit, map);
+            List<Position> hallWallPositions = createWallPositions(path, entrance, exit, map);
+
+            foreach (Position wallPosition in hallWallPositions)
+            {
+                if (!wallPositions.Contains(wallPosition))
+                {
+                    wallPositions.Add(wallPosition);
+                }
+            }
+            floorPositions.AddRange(path);
             
-            return new Hallway(id, path, wallPositions);
+            return new Hallway(id, path, hallWallPositions);
         }
 
         private static Position getExit(Room nextRoom, GameMap map, Random random)
         {
             Position exit = getPassage(nextRoom.getWallPositions(), map, random);
-            if (nextRoom.getEntrance() != null)
-                switchFloorWallTile(map, (Position)nextRoom.getEntrance());
-            nextRoom.setEntrance(exit);
-            switchFloorWallTile(map, exit);
-            return exit;
-        }
 
-        private static void switchFloorWallTile(GameMap map, Position tilePosition)
-        {
-            map[tilePosition.getX(), tilePosition.getY()] = (map[tilePosition.getX(), tilePosition.getY()] == BlockType.Wall) ? BlockType.Floor : BlockType.Wall;
+            if (nextRoom.getEntrance() != null)
+            {
+                switchWallFloor((Position)nextRoom.getEntrance());
+            }
+            nextRoom.setEntrance(exit);
+
+            switchWallFloor(exit);
+            
+            return exit;
         }
 
         private static List<Position> createWallPositions(List<Position> path,Position entrance, Position exit, GameMap map)
@@ -65,11 +74,13 @@ namespace Core.Factories
                     }
                     else
                     {
+                        if (wall.Contains(neighbor))
+                        {
+                            continue;
+                        }
                         wall.Add(neighbor);
-                        map[neighbor.getX(), neighbor.getY()] = BlockType.Wall;
                     }
                 }
-                map[step.getX(), step.getY()] = BlockType.Floor;
             }
             return wall;
         }
@@ -94,26 +105,40 @@ namespace Core.Factories
         private static WalkableTile[,] initializeWalkable(GameMap map)
         {
             WalkableTile[,] walkables = new WalkableTile[map.getWidth(), map.getHeight()];
-            for (int x = 0; x < map.getWidth(); x++)
+            foreach (Room room in map.getRooms())
             {
-                for (int y = 0; y < map.getHeight(); y++)
+                foreach (Position wallPos in room.getWallPositions())
                 {
-                    WalkableTile walkable;
-                    //Δεν εξατάζουμε για τα υπόλοιπα είδη από tiles γιατί δεν υπάρχουν σε αυτό το στάδιο.
-                    switch (map[x, y])
-                    {
-                        case BlockType.Floor:
-                        case BlockType.Wall:
-                            walkable = new WalkableTile(WalkableTile.Wall);
-                            break;
-                        default:
-                            walkable = new WalkableTile(WalkableTile.Nothing);
-                            break;
-                    }
-                    walkables[x, y] = walkable;
+                    walkables[wallPos.getX(), wallPos.getY()] = new WalkableTile(WalkableTile.Wall);
+                }
+                foreach (Position floorPos in room.getFloorPositions())
+                {
+                    walkables[floorPos.getX(), floorPos.getY()] = new WalkableTile(WalkableTile.Floor);
                 }
             }
-            return walkables;
+            foreach (Hallway hall in map.getHallways())
+            {
+                foreach (Position wallPos in hall.getWallPositions())
+                {
+                    walkables[wallPos.getX(), wallPos.getY()] = new WalkableTile(WalkableTile.Wall);
+                }
+                foreach (Position floorPos in hall.getPath())
+                {
+                    walkables[floorPos.getX(), floorPos.getY()] = new WalkableTile(WalkableTile.Floor);
+                }
+            }
+            for (int x = 0; x < walkables.GetLength(0); x++)
+            {
+                for (int y = 0; y < walkables.GetLength(1); y++)
+                {
+                    if (walkables[x, y] != null)
+                    {
+                        continue;
+                    }
+                    walkables[x, y] = new WalkableTile(WalkableTile.Nothing);
+                }
+            }
+                return walkables;
         }
 
         private static Position createHallwayEntrance(Room previousRoom, Hallway previousHall, int tries, GameMap map, Random random)
@@ -122,26 +147,26 @@ namespace Core.Factories
             if (tries < MAX_ATEMPTS_FOR_EXIT || previousHall == null)
             {
                 entrance = getPassage(previousRoom.getWallPositions(), map, random);
+
                 if (previousRoom.getExit() != null)
                 {
-                    switchFloorWallTile(map, (Position)previousRoom.getExit());
+                    switchWallFloor((Position)previousRoom.getExit());
                 }
+                
                 previousRoom.setExit(entrance);
             }
             else
             {
                 entrance = getPassage(previousHall.getWallPositions(), map, random);
+
                 if (previousHall.getIntersection() != null)
                 {
-                    switchFloorWallTile(map, (Position)previousHall.getIntersection());
+                    switchWallFloor((Position)previousHall.getIntersection());
                 }
-                else if (previousRoom.getExit() != null)
-                {
-                    switchFloorWallTile(map, (Position)previousRoom.getExit());
-                }
+                
                 previousHall.setIntersection(entrance);
             }
-            switchFloorWallTile(map, entrance);
+            switchWallFloor(entrance);
             return entrance;
         }
 
@@ -171,12 +196,26 @@ namespace Core.Factories
             }
             //Έλεγχος προσβασιμότητας.
             //Οριζόντια
-            bool reachable = map[passage.getX() + 1, passage.getY()] != BlockType.Wall && map[passage.getX() - 1, passage.getY()] != BlockType.Wall
-                && map[passage.getX(), passage.getY() + 1] == BlockType.Wall && map[passage.getX(), passage.getY() - 1] == BlockType.Wall;
+            bool reachable = !MapFactory.wallPositions.Contains(new Position(passage.getX() + 1, passage.getY())) && !MapFactory.wallPositions.Contains(new Position(passage.getX() - 1, passage.getY()))
+                && MapFactory.wallPositions.Contains(new Position(passage.getX(), passage.getY() + 1)) && MapFactory.wallPositions.Contains(new Position(passage.getX(), passage.getY() - 1));
             //Κάθετα
-            reachable = reachable || map[passage.getX(), passage.getY() + 1] != BlockType.Wall && map[passage.getX(), passage.getY() - 1] != BlockType.Wall
-                && map[passage.getX() + 1, passage.getY()] == BlockType.Wall && map[passage.getX() - 1, passage.getY()] == BlockType.Wall;
+            reachable = reachable || !MapFactory.wallPositions.Contains(new Position(passage.getX(), passage.getY() + 1)) && !MapFactory.wallPositions.Contains(new Position(passage.getX(), passage.getY() - 1))
+                && MapFactory.wallPositions.Contains(new Position(passage.getX() + 1, passage.getY())) && MapFactory.wallPositions.Contains(new Position(passage.getX() - 1, passage.getY()));
             return reachable;//To validDistance ελέγχθηκε πιο πριν, δε χρειάζεται ξανά.
+        }
+
+        private static void switchWallFloor(Position pos)
+        {
+            if (MapFactory.wallPositions.Contains(pos))
+            {
+                MapFactory.wallPositions.Remove(pos);
+                MapFactory.floorPositions.Add(pos);
+            }
+            else
+            {
+                MapFactory.floorPositions.Remove(pos);
+                MapFactory.wallPositions.Add(pos);
+            }
         }
     }
 }
