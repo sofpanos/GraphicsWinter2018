@@ -9,18 +9,23 @@ using UnityEngine.UI;
 using Core.Constructions;
 
 public class Initializer : MonoBehaviour {
-    public GameMap map;
+	//Game Map
+	public GameMap map;
+	//Game Components
 	public GameObject exitSwitch;
 	public GameObject exit;
 	public GameObject roof;
     public GameObject wall;
     public GameObject floor;
     public GameObject player;
-    public int level;
+	//Game Properties
+	public int level;
     public int width;
     public int height;
-	public DateTime startTime;
-
+	private DateTime startTime;
+	private List<TimeSpan> LevelTimes = new List<TimeSpan>();
+	//Helper Properties
+	private List<Position> worldWallPositions;
 	// Use this for initialization
 	void Start () {
 		createLevel();
@@ -51,12 +56,14 @@ public class Initializer : MonoBehaviour {
 	private void createLevel()
 	{
 		map = MapFactory.getNewGameMap(width, height, level);
-		List<Position> wallPositions = new List<Position>();
-		createRooms(wallPositions);
-		createHallways(wallPositions);
+		worldWallPositions = new List<Position>();
+		createRooms();
+		createHallways();
+		worldWallPositions.Clear();
+		worldWallPositions = null;
 	}
 
-	private void createRooms(List<Position> wallPositions)
+	private void createRooms()
 	{
 		bool first = true;
 		foreach (Room room in map.getRooms())
@@ -83,7 +90,7 @@ public class Initializer : MonoBehaviour {
 			roofParent.name = room.getID() + "_Roof";
 			roofParent.transform.SetParent(roomObject.transform);
 
-			createWall(room.getWallBlocks(), room.getFloorPositions(), wallParent, roofParent, wallPositions);
+			createWall(room.getWallBlocks(), room.getFloorPositions(), wallParent, roofParent);
 
 			GameObject floorParent = new GameObject();
 			floorParent.name = room.getID() + "_Floor";
@@ -93,7 +100,7 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
-	private void createHallways(List<Position> worldWallPositions)
+	private void createHallways()
 	{
 		foreach (Hallway hall in map.getHallways())
 		{
@@ -110,7 +117,7 @@ public class Initializer : MonoBehaviour {
 			roofParent.name = hallObject.name + "_Roof";
 			roofParent.transform.SetParent(hallObject.transform);
 
-			createWall(hall.getWallPositions(), wallParent, roofParent, worldWallPositions);
+			createWall(hall.getWallPositions(), wallParent, roofParent);
 
 			GameObject floorParent = new GameObject();
 			floorParent.name = hallObject.name + "_Floor";
@@ -138,7 +145,7 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
-	private void createWall(Dictionary<Position, BlockType> wallBlocks, List<Position> floorPositions, GameObject wallParent, GameObject roofParent, List<Position> worldWallPositions)
+	private void createWall(Dictionary<Position, BlockType> wallBlocks, List<Position> floorPositions, GameObject wallParent, GameObject roofParent)
 	{
 		foreach (KeyValuePair<Position, BlockType> wallBlock in wallBlocks)
 		{
@@ -185,10 +192,14 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
-	private void createWall(List<Position> wallPositions, GameObject wallParent, GameObject roofParent, List<Position> worldWallPositions)
+	private void createWall(List<Position> wallPositions, GameObject wallParent, GameObject roofParent)
 	{
 		foreach (Position wallPosition in wallPositions)
 		{
+			if (worldWallPositions.Contains(wallPosition))
+			{
+				continue;
+			}
 			
 			GameObject hallWall = (GameObject)Instantiate(wall);
 			Vector3 wallTransPos = new Vector3(wallPosition.getX() * 2, 2, wallPosition.getY() * 2);

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ExitSwitchScript : MonoBehaviour {
 
-	bool activated = false;
-	Animator animator;
+	private bool activated = false;
+	private Animator animator;
+	private AudioSource audioSource;
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -33,5 +35,10 @@ public class ExitSwitchScript : MonoBehaviour {
 				activated = false;
 			}
 		}
+	}
+
+	public void OnPlaySound()
+	{
+		audioSource.Play();
 	}
 }

@@ -650,5 +650,4 @@ MonoBehaviour:
   Locked: 1
   open: 0
   LockedSound: {fileID: 8300000, guid: 87bb5e28d73667944811e999d6500d9f, type: 3}
-  OpenSound: {fileID: 0}
-  CloseSound: {fileID: 0}
+  OpenCloseSound: {fileID: 8300000, guid: 06213d1f0efb4844aaae8fc282312c5c, type: 3}

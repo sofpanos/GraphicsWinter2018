@@ -161,12 +161,12 @@ Prefab:
     - target: {fileID: 114243050283247254, guid: 78dbb8c516105fd4e979afc9912027c1,
         type: 2}
       propertyPath: width
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114243050283247254, guid: 78dbb8c516105fd4e979afc9912027c1,
         type: 2}
       propertyPath: height
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78dbb8c516105fd4e979afc9912027c1, type: 2}
@@ -221,12 +221,12 @@ Prefab:
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 314.3
+      value: -81
       objectReference: {fileID: 0}
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -245.6
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}
@@ -241,22 +241,22 @@ Prefab:
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224187429095935926, guid: ada19ff3021d0534e91f277cc4cbe21f,
         type: 2}

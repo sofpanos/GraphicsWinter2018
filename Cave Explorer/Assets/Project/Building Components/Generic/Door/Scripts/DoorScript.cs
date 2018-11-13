@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class DoorScript : MonoBehaviour {
 
 	private Animator animator;
 	private AudioSource audioSource;
-	public bool Locked = true;//θα γίνουν private
-	public bool open = false;//και αυτό, τα άφησα public για λόγους debugging να τα παρακολουθω από το inspector window
+	private DateTime LockedTipTime;
+	private TimeSpan TipTime = new TimeSpan(0, 0, 5);
+	private bool Locked = true;
+	private bool open = false;
+	private bool toolTipShown = false;
 
 	public AudioClip LockedSound;
-	public AudioClip OpenSound;
-	public AudioClip CloseSound;
+	public AudioClip OpenCloseSound;
 
 	// Use this for initialization
 	void Start () {
@@ -46,13 +50,17 @@ public class DoorScript : MonoBehaviour {
 		{
 			audioSource.clip = LockedSound;
 		}
-		else if (open)
-		{
-			audioSource.clip = OpenSound;
-		}
 		else
 		{
-			audioSource.clip = CloseSound;
+			audioSource.clip = OpenCloseSound;
+		}
+
+		if (LockedTipTime != null)
+		{
+			if((DateTime.Now - LockedTipTime) > TipTime)
+			{
+				GameObject.Find("HintTooltip").GetComponent<Text>().text = "";
+			}
 		}
 		
 	}
@@ -79,6 +87,9 @@ public class DoorScript : MonoBehaviour {
 		}
 		else
 		{
+			GameObject toolTip = (GameObject)GameObject.Find("HintToolTip");
+			toolTip.GetComponent<Text>().text = "Door Locked\nFind the Switch to unlock!";
+			LockedTipTime = DateTime.Now;
 			audioSource.Play();
 		}
 	}
@@ -86,5 +97,11 @@ public class DoorScript : MonoBehaviour {
 	public void setLocked(bool value)
 	{
 		Locked = value;
+	}
+
+	public void OnOpenCloseAnimation()
+	{
+		audioSource.clip = OpenCloseSound;
+		audioSource.Play();
 	}
 }
