@@ -32,6 +32,16 @@ public class CharacterControllerScript : MonoBehaviour {
 				audio.Play();
 			previousPosition = transform.position;
 		}
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			cursorLocked = false;
+			InternalLockUpdate();
+			GameObject.Find("Game").GetComponent<PauseMenuScript>().OnPause();
+		}
+		else
+		{
+			cursorLocked = true;
+		}
 		InternalLockUpdate();
 		checkRayCast();
 
@@ -64,15 +74,6 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	private void InternalLockUpdate()
 	{
-		
-		if (Input.GetKeyUp(KeyCode.Escape))
-		{
-			cursorLocked = false;
-		}
-		else if (Input.GetMouseButtonUp(0))
-		{
-			cursorLocked = true;
-		}
 		if (!cursorLocked)
 		{
 			Cursor.lockState = CursorLockMode.None;

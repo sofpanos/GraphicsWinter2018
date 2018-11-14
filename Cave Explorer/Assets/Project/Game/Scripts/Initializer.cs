@@ -20,8 +20,8 @@ public class Initializer : MonoBehaviour {
     public GameObject player;
 	//Game Properties
 	public int level;
-    public int width;
-    public int height;
+    public static int width;
+    public static int height;
 	private DateTime startTime;
 	private List<TimeSpan> LevelTimes = new List<TimeSpan>();
 	//Helper Properties
@@ -55,6 +55,11 @@ public class Initializer : MonoBehaviour {
 
 	private void createLevel()
 	{
+		if(width == 0 || height == 0)
+		{
+			width = 200;
+			height = 100;
+		}
 		map = MapFactory.getNewGameMap(width, height, level);
 		worldWallPositions = new List<Position>();
 		createRooms();
