@@ -16,7 +16,8 @@ public class MainMenuScript : MonoBehaviour {
 	// Use this for initialization
 	private void Start()
 	{
-		SceneManager.UnloadSceneAsync("GameScene");
+		if(SceneManager.GetSceneByName("GameScene").isDirty)
+			SceneManager.UnloadSceneAsync("GameScene");
 		
 		
 		WidthSlider.GetComponent<Slider>().value = Initializer.width;

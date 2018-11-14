@@ -28,6 +28,7 @@ public class PauseMenuScript : MonoBehaviour {
 
 	public void OnMenu()
 	{
+		GamePaused = false;
 		SceneManager.LoadScene("MainMenu");
 	}
 
