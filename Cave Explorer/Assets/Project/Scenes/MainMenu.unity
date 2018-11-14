@@ -156,7 +156,6 @@ GameObject:
   m_Component:
   - component: {fileID: 17805396}
   - component: {fileID: 17805398}
-  - component: {fileID: 17805397}
   m_Layer: 5
   m_Name: WidthSlider
   m_TagString: Untagged
@@ -185,19 +184,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.5, y: 0}
   m_SizeDelta: {x: -35, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &17805397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 17805395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e649ecf850a9c040a94e412d98e33bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ValueLabel: {fileID: 1273891074}
-  IsWidth: 1
 --- !u!114 &17805398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,9 +230,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 17805397}
-        m_MethodName: OnValueChange
-        m_Mode: 1
+      - m_Target: {fileID: 222489284}
+        m_MethodName: OnSliderValueChange
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -337,7 +323,6 @@ GameObject:
   - component: {fileID: 192543037}
   - component: {fileID: 192543036}
   - component: {fileID: 192543035}
-  - component: {fileID: 192543034}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -364,17 +349,6 @@ RectTransform:
   m_AnchoredPosition: {x: -3.4999695, y: -225}
   m_SizeDelta: {x: -29, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &192543034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 192543032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9eec63386550364d990c48c5ca647fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &192543035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,8 +388,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 192543034}
-        m_MethodName: OnQuitButtonClicked
+      - m_Target: {fileID: 222489284}
+        m_MethodName: OnQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -424,7 +398,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &192543036
@@ -472,6 +446,7 @@ GameObject:
   - component: {fileID: 222489282}
   - component: {fileID: 222489281}
   - component: {fileID: 222489280}
+  - component: {fileID: 222489284}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -555,6 +530,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &222489284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222489279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25cbe38adadb79844970cc09aeca630d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WidthSlider: {fileID: 17805395}
+  HeightSlider: {fileID: 374871154}
+  HeightValueLabel: {fileID: 1384314009}
+  WidthValueLabel: {fileID: 1273891074}
 --- !u!1 &359483223
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +631,6 @@ GameObject:
   m_Component:
   - component: {fileID: 374871155}
   - component: {fileID: 374871157}
-  - component: {fileID: 374871156}
   m_Layer: 5
   m_Name: HeightSlider
   m_TagString: Untagged
@@ -670,19 +659,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.5000305, y: 1}
   m_SizeDelta: {x: -35, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &374871156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 374871154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e649ecf850a9c040a94e412d98e33bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ValueLabel: {fileID: 1384314009}
-  IsWidth: 0
 --- !u!114 &374871157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,13 +705,13 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 374871156}
-        m_MethodName: OnValueChange
-        m_Mode: 1
+      - m_Target: {fileID: 222489284}
+        m_MethodName: OnSliderValueChange
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1175,7 +1151,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1362,7 +1338,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 100
 --- !u!222 &1384314013
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1450,7 +1426,6 @@ GameObject:
   - component: {fileID: 1678564853}
   - component: {fileID: 1678564852}
   - component: {fileID: 1678564851}
-  - component: {fileID: 1678564854}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1516,8 +1491,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1678564854}
-        m_MethodName: OnStartButtonClicked
+      - m_Target: {fileID: 222489284}
+        m_MethodName: OnStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1526,7 +1501,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1678564852
@@ -1563,17 +1538,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1678564849}
   m_CullTransparentMesh: 0
---- !u!114 &1678564854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1678564849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9eec63386550364d990c48c5ca647fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1710160538
 GameObject:
   m_ObjectHideFlags: 0

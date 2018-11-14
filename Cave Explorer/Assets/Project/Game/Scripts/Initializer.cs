@@ -30,8 +30,7 @@ public class Initializer : MonoBehaviour {
 	void Start () {
 		createLevel();
 
-		startTime = DateTime.Now;
-		
+		GameObject.Find("Time").GetComponent<TimeScript>().StartTime = DateTime.Now;	
 	}
 	public void startNextLevel()
 	{
@@ -42,15 +41,19 @@ public class Initializer : MonoBehaviour {
 		else
 		{
 			level++;
-			//Clear Level
+			LevelTimes.Add(GameObject.Find("Time").GetComponent<TimeScript>().GetCurrentTime());
+			ClearLevel();
 			createLevel();
+			GameObject.Find("Time").GetComponent<TimeScript>().StartTime = DateTime.Now;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		TimeSpan timeEllapsed = DateTime.Now - startTime;
-		GameObject.Find("Time").GetComponent<Text>().text = String.Format("Time: {0:D2}:{1:D2}:{2:D2}", timeEllapsed.Hours, timeEllapsed.Minutes, timeEllapsed.Seconds);
+
+	private void ClearLevel()
+	{
+		foreach(Transform child in transform)
+		{
+			Destroy(child.gameObject);
+		}
 	}
 
 	private void createLevel()
