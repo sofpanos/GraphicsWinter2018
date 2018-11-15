@@ -11,10 +11,10 @@ public class PauseMenuScript : MonoBehaviour {
 
 	public void OnPause()
 	{
+		CharacterControllerScript.cursorLocked = false;
 		Time.timeScale = 0f;
 		GamePaused = true;
 		TimeUI.GetComponent<TimeScript>().PauseTime = DateTime.Now;
-		CharacterControllerScript.cursorLocked = false;
 		PauseMenu.SetActive(true);
 	}
 
@@ -29,6 +29,7 @@ public class PauseMenuScript : MonoBehaviour {
 	public void OnMenu()
 	{
 		GamePaused = false;
+		Time.timeScale = 1f;
 		SceneManager.LoadScene("MainMenu");
 	}
 
