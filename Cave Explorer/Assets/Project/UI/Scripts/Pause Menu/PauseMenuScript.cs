@@ -20,9 +20,9 @@ public class PauseMenuScript : MonoBehaviour {
 
 	public void OnResume()
 	{
+		CharacterControllerScript.cursorLocked = true;
 		GamePaused = false;
 		Time.timeScale = 1f;
-		CharacterControllerScript.cursorLocked = true;
 		PauseMenu.SetActive(false);
 	}
 

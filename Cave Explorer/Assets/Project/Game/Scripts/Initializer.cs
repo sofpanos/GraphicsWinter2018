@@ -20,8 +20,8 @@ public class Initializer : MonoBehaviour {
     public GameObject player;
 	//Game Properties
 	public int level;
-    public static int width;
-    public static int height;
+    public static int width = 200;
+    public static int height = 100;
 	private DateTime startTime;
 	private List<TimeSpan> LevelTimes = new List<TimeSpan>();
 	//Helper Properties
