@@ -235,16 +235,19 @@ public class Initializer : MonoBehaviour {
 				if(neighbor.getX() == objPosition.getX() && neighbor.getY() == objPosition.getY() - 1)
 				{
 					obj.transform.Rotate(Vector3.up, 180f);
+					break;
 				}
 				else if(neighbor.getY() == objPosition.getY())
 				{
 					if(neighbor.getX() == objPosition.getX() + 1)
 					{
 						obj.transform.Rotate(Vector3.up, 90f);
+						break;
 					}
 					else if(neighbor.getX() == objPosition.getX() - 1)
 					{
 						obj.transform.Rotate(Vector3.up, -90f);
+						break;
 					}
 				}
 			}

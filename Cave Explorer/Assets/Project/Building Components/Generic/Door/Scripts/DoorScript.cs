@@ -17,6 +17,8 @@ public class DoorScript : MonoBehaviour {
 
 	public AudioClip LockedSound;
 	public AudioClip OpenCloseSound;
+	public GameObject Game;
+	public GameObject ToolTip;
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +34,7 @@ public class DoorScript : MonoBehaviour {
 		{
 			if(!Locked && open)
 			{
-				GameObject.Find("Game").GetComponent<Initializer>().startNextLevel();
+				Game.GetComponent<Initializer>().startNextLevel();
 			}
 		}
 	}
@@ -52,7 +54,7 @@ public class DoorScript : MonoBehaviour {
 		{
 			if((DateTime.Now - LockedTipTime) > TipTime)
 			{
-				GameObject.Find("HintTooltip").GetComponent<Text>().text = "";
+				ToolTip.GetComponent<Text>().text = "";
 				toolTipShown = false;
 			}
 		}
@@ -81,10 +83,8 @@ public class DoorScript : MonoBehaviour {
 		}
 		else
 		{
-			GameObject toolTip = (GameObject)GameObject.Find("HintToolTip");
-			toolTip.GetComponent<Text>().text = "Door Locked\nFind the Switch to unlock!";
-			LockedTipTime = DateTime.Now;
-			toolTipShown = true;
+			ToolTipScript.tooltipText = "Door Locked\nFind the Switch to unlock!";
+			ToolTipScript.showLocked = true;
 			audioSource.Play();
 		}
 	}
