@@ -18,7 +18,10 @@ public class MouseLook : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(PauseMenuScript.GamePaused)
+		{
+			return;
+		}
 		Vector2 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
 		mouseDelta = Vector2.Scale(mouseDelta, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
 		smoothV.x = Mathf.Lerp(smoothV.x, mouseDelta.x, 1f / smoothing);

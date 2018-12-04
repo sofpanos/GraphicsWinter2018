@@ -20,8 +20,8 @@ public class Initializer : MonoBehaviour {
     public GameObject player;
 	//Game Properties
 	public int level;
-    public int width;
-    public int height;
+    public static int width = 200;
+    public static int height = 100;
 	private DateTime startTime;
 	private List<TimeSpan> LevelTimes = new List<TimeSpan>();
 	//Helper Properties
@@ -30,8 +30,7 @@ public class Initializer : MonoBehaviour {
 	void Start () {
 		createLevel();
 
-		startTime = DateTime.Now;
-		
+		GameObject.Find("Time").GetComponent<TimeScript>().StartTime = DateTime.Now;	
 	}
 	public void startNextLevel()
 	{
@@ -42,19 +41,28 @@ public class Initializer : MonoBehaviour {
 		else
 		{
 			level++;
-			//Clear Level
+			LevelTimes.Add(GameObject.Find("Time").GetComponent<TimeScript>().GetCurrentTime());
+			ClearLevel();
 			createLevel();
+			GameObject.Find("Time").GetComponent<TimeScript>().StartTime = DateTime.Now;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		TimeSpan timeEllapsed = DateTime.Now - startTime;
-		GameObject.Find("Time").GetComponent<Text>().text = String.Format("Time: {0:D2}:{1:D2}:{2:D2}", timeEllapsed.Hours, timeEllapsed.Minutes, timeEllapsed.Seconds);
+
+	private void ClearLevel()
+	{
+		foreach(Transform child in transform)
+		{
+			Destroy(child.gameObject);
+		}
 	}
 
 	private void createLevel()
 	{
+		if(width == 0 || height == 0)
+		{
+			width = 200;
+			height = 100;
+		}
 		map = MapFactory.getNewGameMap(width, height, level);
 		worldWallPositions = new List<Position>();
 		createRooms();
@@ -227,16 +235,19 @@ public class Initializer : MonoBehaviour {
 				if(neighbor.getX() == objPosition.getX() && neighbor.getY() == objPosition.getY() - 1)
 				{
 					obj.transform.Rotate(Vector3.up, 180f);
+					break;
 				}
 				else if(neighbor.getY() == objPosition.getY())
 				{
 					if(neighbor.getX() == objPosition.getX() + 1)
 					{
 						obj.transform.Rotate(Vector3.up, 90f);
+						break;
 					}
 					else if(neighbor.getX() == objPosition.getX() - 1)
 					{
 						obj.transform.Rotate(Vector3.up, -90f);
+						break;
 					}
 				}
 			}

@@ -13,13 +13,5 @@ public class ExitBlockScript : MonoBehaviour {
 		door.transform.localPosition = new Vector3(0, 0.02738444f, 0.4730835f);
 		door.transform.Rotate(Vector3.up, this.transform.rotation.eulerAngles.y);
 	}
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

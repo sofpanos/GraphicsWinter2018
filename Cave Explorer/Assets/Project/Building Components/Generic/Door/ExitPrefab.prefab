@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead36e9261f81ee4f89a75bb574ea667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Locked: 1
-  open: 0
   LockedSound: {fileID: 8300000, guid: 87bb5e28d73667944811e999d6500d9f, type: 3}
   OpenCloseSound: {fileID: 8300000, guid: 06213d1f0efb4844aaae8fc282312c5c, type: 3}
+  Game: {fileID: 1980163837200808, guid: 78dbb8c516105fd4e979afc9912027c1, type: 2}
+  ToolTip: {fileID: 1855525557914116, guid: 79d8d0328a9834e4380d9c8c5b2b30f7, type: 2}

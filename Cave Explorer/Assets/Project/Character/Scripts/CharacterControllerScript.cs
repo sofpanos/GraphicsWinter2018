@@ -7,15 +7,21 @@ public class CharacterControllerScript : MonoBehaviour {
 	public float speed = 10f;
 	public float step = 0.5f;
 	Vector3 previousPosition;
-	private bool cursorLocked;
+	public static bool cursorLocked;
 	// Use this for initialization
 	void Start () {
-		this.cursorLocked = true;//For initial cursor lock
+		cursorLocked = true;//For initial cursor lock
 		this.previousPosition = this.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (PauseMenuScript.GamePaused)
+		{
+			InternalLockUpdate();
+			return;
+		}
 
 		float zAxis = Input.GetAxis("Vertical") * speed;
 		float xAxis = Input.GetAxis("Horizontal") * speed;
@@ -32,15 +38,12 @@ public class CharacterControllerScript : MonoBehaviour {
 				audio.Play();
 			previousPosition = transform.position;
 		}
+		
 		InternalLockUpdate();
 		checkRayCast();
 
 	}
-	private void FixedUpdate()
-	{
-		
-	}
-
+	
 	private void checkRayCast()
 	{
 		RaycastHit hit;
@@ -64,23 +67,16 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	private void InternalLockUpdate()
 	{
-		
-		if (Input.GetKeyUp(KeyCode.Escape))
-		{
-			cursorLocked = false;
-		}
-		else if (Input.GetMouseButtonUp(0))
-		{
-			cursorLocked = true;
-		}
 		if (!cursorLocked)
 		{
 			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 			
 		}
 		else
 		{
 			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
 			
 		}
 	}
