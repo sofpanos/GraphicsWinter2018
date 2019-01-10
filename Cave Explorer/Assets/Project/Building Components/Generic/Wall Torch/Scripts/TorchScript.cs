@@ -7,7 +7,7 @@ public class TorchScript : MonoBehaviour
     public ParticleSystem firePS;
     public Light fireLight;
 
-    protected bool fireEnabled;
+    public bool fireEnabled;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,12 @@ public class TorchScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!fireEnabled)
+        if (fireEnabled)
         {
             if (!firePS.isPlaying)
             {
                 firePS.Play();
                 fireLight.enabled = true;
-                fireEnabled = true;
             }
         }
         else
@@ -35,7 +34,6 @@ public class TorchScript : MonoBehaviour
             {
                 firePS.Stop();
                 fireLight.enabled = false;
-                fireEnabled = false;
             }
         }
     }
