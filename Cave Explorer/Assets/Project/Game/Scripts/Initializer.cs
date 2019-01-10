@@ -160,6 +160,8 @@ public class Initializer : MonoBehaviour {
 
 			Vector3 wallTransPos = new Vector3(wallBlock.Key.getX() * 2, 2, wallBlock.Key.getY() * 2);
 			worldWallPositions.Add(wallBlock.Key);
+
+            //add cases for switchWall & torchWall
 			switch (wallBlock.Value) {
 				case BlockType.Exit:
 					GameObject exitObject = (GameObject)Instantiate(exit);
@@ -192,8 +194,9 @@ public class Initializer : MonoBehaviour {
 					break;
 			}
 
-			//Create Roof over wall, avoiding light through the edges
-			GameObject roofObj = (GameObject)Instantiate(roof);
+            //Create Roof over wall, avoiding light through the edges
+
+            GameObject roofObj = (GameObject)Instantiate(roof);
 			roofObj.name = roofParent.name + "_" + wallBlock.Key.getX() + "_" + wallBlock.Key.getY();
 			roofObj.transform.position = new Vector3(wallBlock.Key.getX() * 2, 4, wallBlock.Key.getY() * 2);
 			roofObj.transform.SetParent(roofParent.transform);

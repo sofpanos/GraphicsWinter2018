@@ -1524,6 +1524,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c519b5f1efd54429003d89027f9043, type: 3}
+--- !u!108 &764051349 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8825944597572584213, guid: 041d3d2e288b2484fb600be7d7c2a6bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 8825944598286040192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &770074565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3051,6 +3057,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePS: {fileID: 228931332}
+  fireLight: {fileID: 764051349}
+  fireEnabled: 0
 --- !u!4 &1431933677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4095457584783456, guid: 33c08ef6a6ce70a4daa499c476e1defe,
@@ -4482,6 +4490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825944598111636356, guid: 041d3d2e288b2484fb600be7d7c2a6bd,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8825944597572584211, guid: 041d3d2e288b2484fb600be7d7c2a6bd,
         type: 3}
