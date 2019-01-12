@@ -40,7 +40,9 @@ public class MainMenuScript : MonoBehaviour {
 
 	public void OnStart()
 	{
-		SceneManager.LoadScene("GameScene");
+		Initializer.level = 0;
+		Initializer.LevelTimes = new List<System.TimeSpan>();
+		SceneManager.LoadScene("LoadingScene");
 	}
 
 	public void OnQuit()
