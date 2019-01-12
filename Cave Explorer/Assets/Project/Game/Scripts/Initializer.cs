@@ -7,6 +7,7 @@ using Core.Utility;
 using System;
 using UnityEngine.UI;
 using Core.Constructions;
+using UnityEngine.SceneManagement;
 
 public class Initializer : MonoBehaviour {
 	//Game Map
@@ -19,24 +20,32 @@ public class Initializer : MonoBehaviour {
     public GameObject floor;
     public GameObject player;
 	//Game Properties
-	public int level;
+	public static int level;
     public static int width = 200;
     public static int height = 100;
 	private DateTime startTime;
-	private List<TimeSpan> LevelTimes = new List<TimeSpan>();
+	public static List<TimeSpan> LevelTimes = new List<TimeSpan>();
+	public static int score = 0;
 	//Helper Properties
 	private List<Position> worldWallPositions;
 	// Use this for initialization
 	void Start () {
-		createLevel();
-
+		startNextLevel();
 		GameObject.Find("Time").GetComponent<TimeScript>().StartTime = DateTime.Now;	
 	}
 	public void startNextLevel()
 	{
 		if (level == 3)
 		{
-			//calculate score and end game
+			float maxScoreMultiplier = (30 * 60) / (200 * 100);
+			float maxScore = maxScoreMultiplier * width * height;
+			TimeSpan total = new TimeSpan(0, 0, 0);
+			foreach (TimeSpan levelTime in LevelTimes)
+			{
+				total += levelTime;
+			}
+			score = (int)(maxScore - total.TotalSeconds);
+			SceneManager.LoadScene("ScoreScene");
 		}
 		else
 		{
