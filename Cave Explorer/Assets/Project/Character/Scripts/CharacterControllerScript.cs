@@ -61,6 +61,10 @@ public class CharacterControllerScript : MonoBehaviour {
 					GameObject exitSwitch = GameObject.Find("ExitSwitch");
 					exitSwitch.GetComponentInChildren<ExitSwitchScript>().initiateSwitch(transform.gameObject);
 				}
+                else if (hit.transform.tag == "Lever")
+                {
+                    hit.transform.parent.GetComponent<TorchSwitchScript>().onLeverClick();
+                }
 			}
 		}
 	}

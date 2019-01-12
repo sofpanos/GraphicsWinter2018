@@ -115,7 +115,7 @@ namespace Core.Constructions
             set;
         }
 
-
+        //TODO
         private void setLights(Random random, Dictionary<Position, BlockType> validBlocks)
         {
             List<Position> validKeys = new List<Position>(validBlocks.Keys);
