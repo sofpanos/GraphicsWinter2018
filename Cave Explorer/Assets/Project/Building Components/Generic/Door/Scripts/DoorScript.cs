@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class DoorScript : MonoBehaviour {
@@ -34,7 +35,7 @@ public class DoorScript : MonoBehaviour {
 		{
 			if(!Locked && open)
 			{
-				Game.GetComponent<Initializer>().startNextLevel();
+				SceneManager.LoadScene("LoadingScene");
 			}
 		}
 	}
