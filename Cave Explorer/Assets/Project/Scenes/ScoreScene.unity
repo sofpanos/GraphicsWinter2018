@@ -1153,7 +1153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Your Score Is: '
+  m_Text: 'Your Time Is: '
 --- !u!222 &1683393597
 CanvasRenderer:
   m_ObjectHideFlags: 0

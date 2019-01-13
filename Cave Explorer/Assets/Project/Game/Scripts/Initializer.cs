@@ -27,7 +27,7 @@ public class Initializer : MonoBehaviour {
     public static int height = 100;
 	private DateTime startTime;
 	public static List<TimeSpan> LevelTimes = new List<TimeSpan>();
-	public static int score = 0;
+	public static TimeSpan score = new TimeSpan();
 	//Helper Properties
 	private List<Position> worldWallPositions;
 	// Use this for initialization
@@ -39,14 +39,12 @@ public class Initializer : MonoBehaviour {
 	{
 		if (level == 3)
 		{
-			float maxScoreMultiplier = (30 * 60) / (200 * 100);
-			float maxScore = maxScoreMultiplier * width * height;
 			TimeSpan total = new TimeSpan(0, 0, 0);
 			foreach (TimeSpan levelTime in LevelTimes)
 			{
 				total += levelTime;
 			}
-			score = (int)(maxScore - total.TotalSeconds);
+			score = total;
 			SceneManager.LoadScene("ScoreScene");
 		}
 		else
