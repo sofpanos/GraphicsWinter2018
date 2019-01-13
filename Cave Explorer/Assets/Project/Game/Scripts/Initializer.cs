@@ -27,7 +27,7 @@ public class Initializer : MonoBehaviour {
     public static int height = 100;
 	private DateTime startTime;
 	public static List<TimeSpan> LevelTimes = new List<TimeSpan>();
-	public static int score = 0;
+	public static TimeSpan score = new TimeSpan();
 	//Helper Properties
 	private List<Position> worldWallPositions;
 	// Use this for initialization
@@ -46,7 +46,7 @@ public class Initializer : MonoBehaviour {
 			{
 				total += levelTime;
 			}
-			score = (int)(maxScore - total.TotalSeconds);
+			score = total;
 			SceneManager.LoadScene("ScoreScene");
 		}
 		else

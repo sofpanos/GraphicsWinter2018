@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -16,7 +17,7 @@ public class ScoreSceneScript : MonoBehaviour
 			Cursor.visible = true;
 		}
 
-		ScoreText.text = "Your Score is: " + Initializer.score;
+		ScoreText.text = String.Format("Your time is: {0:D2}:{1:D2}:{2:D2}", Initializer.score.Hours, Initializer.score.Minutes, Initializer.score.Seconds);
     }
 
 	public void OnPlayAgain()
