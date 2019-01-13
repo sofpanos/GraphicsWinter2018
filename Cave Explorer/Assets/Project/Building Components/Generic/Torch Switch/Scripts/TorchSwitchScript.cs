@@ -12,7 +12,7 @@ public class TorchSwitchScript : MonoBehaviour
     void Start()
     {
         activated = false;
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         audio = GetComponent<AudioSource>();
     }
 
@@ -28,7 +28,7 @@ public class TorchSwitchScript : MonoBehaviour
         {
             Debug.Log("Pressed primary button.");
             GameObject.Find("RockWallWithTorch").GetComponent<TorchScript>().fireEnabled = true;
-            //animator.SetBool("activate", true);
+            animator.SetBool("ActivateDown", true);
             activated = true;
             PlaySound();
         }
