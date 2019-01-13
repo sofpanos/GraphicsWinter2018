@@ -28,13 +28,5 @@ public class TorchScript : MonoBehaviour
                 fireLight.enabled = true;
             }
         }
-        else
-        {
-            if (firePS.isPlaying)
-            {
-                firePS.Stop();
-                fireLight.enabled = false;
-            }
-        }
     }
 }
