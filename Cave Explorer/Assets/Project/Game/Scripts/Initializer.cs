@@ -39,8 +39,6 @@ public class Initializer : MonoBehaviour {
 	{
 		if (level == 3)
 		{
-			float maxScoreMultiplier = (30 * 60) / (200 * 100);
-			float maxScore = maxScoreMultiplier * width * height;
 			TimeSpan total = new TimeSpan(0, 0, 0);
 			foreach (TimeSpan levelTime in LevelTimes)
 			{
