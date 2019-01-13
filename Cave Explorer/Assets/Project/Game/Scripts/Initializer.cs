@@ -15,6 +15,8 @@ public class Initializer : MonoBehaviour {
 	//Game Components
 	public GameObject exitSwitch;
 	public GameObject exit;
+    public GameObject torchSwitch;
+    public GameObject torch;
 	public GameObject roof;
     public GameObject wall;
     public GameObject floor;
@@ -166,11 +168,9 @@ public class Initializer : MonoBehaviour {
 	{
 		foreach (KeyValuePair<Position, BlockType> wallBlock in wallBlocks)
 		{
-
 			Vector3 wallTransPos = new Vector3(wallBlock.Key.getX() * 2, 2, wallBlock.Key.getY() * 2);
 			worldWallPositions.Add(wallBlock.Key);
 
-            //add cases for switchWall & torchWall
 			switch (wallBlock.Value) {
 				case BlockType.Exit:
 					GameObject exitObject = (GameObject)Instantiate(exit);
@@ -186,6 +186,20 @@ public class Initializer : MonoBehaviour {
 					rotateToFloor(exitSwitchObj, wallBlock.Key, floorPositions);
 					exitSwitchObj.transform.SetParent(wallParent.transform);
 					break;
+                case BlockType.Switch:
+                    GameObject torchSwitchObj = (GameObject)Instantiate(torchSwitch);
+                    torchSwitchObj.name = "TorchSwitch";
+                    torchSwitchObj.transform.position = wallTransPos;
+                    rotateToFloor(torchSwitchObj, wallBlock.Key, floorPositions);
+                    torchSwitchObj.transform.SetParent(wallParent.transform);
+                    break;
+                case BlockType.Light:
+                    GameObject torchObj = (GameObject)Instantiate(torch);
+                    torchObj.name = "Torch";
+                    torchObj.transform.position = wallTransPos;
+                    rotateToFloor(torchObj, wallBlock.Key, floorPositions);
+                    torchObj.transform.SetParent(wallParent.transform);
+                    break;
 				default:
 					GameObject roomWall = (GameObject)Instantiate(wall);
 					roomWall.name = wallParent.name + "_" + wallBlock.Key.getX() + "_" + wallBlock.Key.getY();
