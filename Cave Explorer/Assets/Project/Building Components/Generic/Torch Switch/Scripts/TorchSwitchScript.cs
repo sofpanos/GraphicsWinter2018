@@ -24,14 +24,11 @@ public class TorchSwitchScript : MonoBehaviour
 
     public void onLeverClick()
     {
-        if (!activated)
-        {
-            Debug.Log("Pressed primary button.");
-            GameObject.Find("RockWallWithTorch").GetComponent<TorchScript>().fireEnabled = true;
-            animator.SetBool("ActivateDown", true);
-            activated = true;
-            PlaySound();
-        }
+        Debug.Log("Pressed primary button.");
+        GameObject.Find("Torch").GetComponent<TorchScript>().fireEnabled = true;
+        animator.SetBool("ActivateDown", true);
+        activated = true;
+        PlaySound();
     }
 
     public void PlaySound()
