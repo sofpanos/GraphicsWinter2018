@@ -161,6 +161,8 @@ namespace Core.Factories
             {
                 maxY++;
             }
+
+            //prin to domiti random range 0,2 -> 50% kai perasma ston con tipoy enum
             Room room = new Room(minX, minY, maxX - minX + 1, maxY - minY + 1);
             setRoomComponents(room, roomRectangles);
             room.setID(id);

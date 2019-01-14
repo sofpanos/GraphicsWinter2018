@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 public class Initializer : MonoBehaviour {
 	//Game Map
 	public GameMap map;
-	//Game Components
+	//Game Components na ginoun listes
 	public GameObject exitSwitch;
 	public GameObject exit;
     public GameObject torchSwitch;
@@ -30,6 +30,7 @@ public class Initializer : MonoBehaviour {
 	public static TimeSpan score = new TimeSpan();
 	//Helper Properties
 	private List<Position> worldWallPositions;
+
 	// Use this for initialization
 	void Start () {
 		startNextLevel();
@@ -144,6 +145,7 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
+    //na allaksei
 	private void createFloor(List<Position> floorPositions, GameObject floorParent, GameObject roofParent)
 	{
 		foreach (Position floorPosition in floorPositions)
@@ -162,6 +164,7 @@ public class Initializer : MonoBehaviour {
 		}
 	}
 
+    //na allaksei
 	private void createWall(Dictionary<Position, BlockType> wallBlocks, List<Position> floorPositions, GameObject wallParent, GameObject roofParent)
 	{
 		foreach (KeyValuePair<Position, BlockType> wallBlock in wallBlocks)

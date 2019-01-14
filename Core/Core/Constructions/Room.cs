@@ -24,11 +24,14 @@ namespace Core.Constructions
             HasLight = false;
         }
 
-        public Room(int xOff, int yOff, int width, int height, string type)
+        //na valw param typo enum
+        public Room(int xOff, int yOff, int width, int height)
         {
             this.roomContainer = new Section(xOff, yOff, width, height);
             this.type = type;
         }
+
+        //kai ena get
 
         public string getID()
         {
