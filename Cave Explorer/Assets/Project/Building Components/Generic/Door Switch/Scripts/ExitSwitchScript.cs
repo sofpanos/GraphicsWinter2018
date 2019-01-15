@@ -20,18 +20,26 @@ public class ExitSwitchScript : MonoBehaviour {
 
 	public void initiateSwitch(GameObject initiator)
 	{
-		if(initiator.tag == "Player")
+        GameObject rockExit = GameObject.Find("Exit");
+
+        if (initiator.tag == "Player")
 		{
 			if (!activated)
 			{
-				GameObject.Find("Exit").GetComponentInChildren<DoorScript>().setLocked(false);
-				animator.SetBool("activate", true);
+                if (rockExit != null)
+                    rockExit.GetComponentInChildren<DoorScript>().setLocked(false);
+                else
+                    GameObject.Find("MountainExit").GetComponentInChildren<DoorScript>().setLocked(false);
+                animator.SetBool("activate", true);
 				activated = true;
 			}
 			else
 			{
-				GameObject.Find("Exit").GetComponentInChildren<DoorScript>().setLocked(true);
-				animator.SetBool("deactivate", true);
+                if (rockExit != null)
+                    rockExit.GetComponentInChildren<DoorScript>().setLocked(true);
+                else
+                    GameObject.Find("MountainExit").GetComponentInChildren<DoorScript>().setLocked(true);
+                animator.SetBool("deactivate", true);
 				activated = false;
 			}
 		}

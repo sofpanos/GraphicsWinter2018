@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class TorchSwitchScript : MonoBehaviour
@@ -33,8 +33,20 @@ public class TorchSwitchScript : MonoBehaviour
             {
                 script.fireEnabled = true;
             }
-            
             activated = true;
+
+            /* For testing the sample scene
+            GameObject.Find("RockWallWithTorch").GetComponent<TorchScript>().fireEnabled = true;
+            int i = 1;
+            while (true)
+            {
+                GameObject tempObj = GameObject.Find("RockWallWithTorch (" + i + ")");
+                if (tempObj == null)
+                    break;
+                tempObj.GetComponent<TorchScript>().fireEnabled = true;
+                i++;
+            }
+            GameObject.Find("MountainWallWithTorch").GetComponent<TorchScript>().fireEnabled = true;*/
         }
     }
 

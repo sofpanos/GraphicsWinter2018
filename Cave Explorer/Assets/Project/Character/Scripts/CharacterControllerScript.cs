@@ -54,12 +54,20 @@ public class CharacterControllerScript : MonoBehaviour {
 				if (hit.transform.tag == "Exit")
 				{
 					GameObject exit = GameObject.Find("Exit");
-					exit.GetComponentInChildren<DoorScript>().openCloseDoor(transform.gameObject);
+
+                    if (exit == null)
+                        exit = GameObject.Find("MountainExit");
+
+                    exit.GetComponentInChildren<DoorScript>().openCloseDoor(transform.gameObject);
 				}
 				else if (hit.transform.tag == "ExitSwitch")
 				{
 					GameObject exitSwitch = GameObject.Find("ExitSwitch");
-					exitSwitch.GetComponentInChildren<ExitSwitchScript>().initiateSwitch(transform.gameObject);
+
+                    if (exitSwitch == null)
+                        exitSwitch = GameObject.Find("MountainExitSwitch");
+
+                    exitSwitch.GetComponentInChildren<ExitSwitchScript>().initiateSwitch(transform.gameObject);
 				}
                 else if (hit.transform.tag == "Lever")
                 {
